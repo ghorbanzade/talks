@@ -10,6 +10,7 @@ Pejman is interested in problems related to the design and maintenance of softwa
 
 ## Social Links
 
+- [Profile Pictures](https://github.com/ghorbanzade/talks/tree/main/assets)
 - [Twitter](https://twitter.com/heypejman)
 - [GitHub](https://github.com/ghorbanzade)
 - [LinkedIn](https://linkedin.com/in/ghorbanzade)
