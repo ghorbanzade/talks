@@ -121,7 +121,6 @@ IoTFuse Meetup, Minneapolis, MN
 Swish: A Real-Time Hand Gesture Recognition Library
 
 - [Registration Link](https://www.meetup.com/applied_ai/events/243018155/)
-- [GitHub Repository](https://github.com/ghorbanzade/swish)
 
 ### April 21, 2017
 
