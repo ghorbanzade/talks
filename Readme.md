@@ -18,6 +18,14 @@ Pejman is interested in problems related to the design and maintenance of softwa
 
 ## Upcoming Talks
 
+### March 15, 2022
+
+Java MN User Group
+
+Continuous Regression Testing in Java
+
+- [Registration Link](https://www.meetup.com/Java-User-Group-Hosted-by-TEKsystems/events/284076315/)
+
 ### April 13, 2022
 
 Denver Java User Group
@@ -25,6 +33,8 @@ Denver Java User Group
 Improving Developer Productivity through Continuous Regression Testing
 
 - [Registration Link](https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/)
+
+[![Denver Java User Group](assets/images/220413-djug.png)](assets/images/220413-djug.png "Denver Java User Group")
 
 ## Previous Talks
 
