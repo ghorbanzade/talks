@@ -26,6 +26,12 @@ Continuous Regression Testing in Java
 
 - [Registration Link](https://www.meetup.com/Java-User-Group-Hosted-by-TEKsystems/events/284076315/)
 
+### March 28, 2022
+
+Prime Digital Academy Alumni
+
+Software Testing Best Practices
+
 ### April 13, 2022
 
 Denver Java User Group
