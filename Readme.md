@@ -18,14 +18,6 @@ Pejman is interested in problems related to the design and maintenance of softwa
 
 ## Upcoming Talks
 
-### March 15, 2022
-
-Java MN User Group
-
-Continuous Regression Testing in Java
-
-- [Registration Link](https://www.meetup.com/Java-User-Group-Hosted-by-TEKsystems/events/284076315/)
-
 ### March 28, 2022
 
 Prime Digital Academy Alumni
@@ -45,6 +37,14 @@ Improving Developer Productivity through Continuous Regression Testing
 ## Previous Talks
 
 > [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+
+### March 15, 2022
+
+Java MN User Group
+
+Continuous Regression Testing in Java
+
+- [Registration Link](https://www.meetup.com/Java-User-Group-Hosted-by-TEKsystems/events/284076315/)
 
 ### November 11, 2021
 
