@@ -18,11 +18,13 @@ Pejman is interested in problems related to the design and maintenance of softwa
 
 ## Upcoming Talks
 
-### March 28, 2022
+### April 6, 2022
 
-Prime Digital Academy Alumni
+Twin Cities Test Automation Group
 
-Software Testing Best Practices
+Continuous Regression Testing, Benefits and Challenges
+
+- [Registration Link](https://www.meetup.com/TC-TAG/events/284654695/)
 
 ### April 13, 2022
 
@@ -37,6 +39,12 @@ Improving Developer Productivity through Continuous Regression Testing
 ## Previous Talks
 
 > [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+
+### March 28, 2022
+
+Prime Digital Academy Alumni
+
+Software Testing Best Practices
 
 ### March 15, 2022
 
