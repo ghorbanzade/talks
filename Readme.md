@@ -26,6 +26,8 @@ Continuous Regression Testing, Benefits and Challenges
 
 - [Registration Link](https://www.meetup.com/TC-TAG/events/284654695/)
 
+[![Twin Cities Test Automation Group](assets/images/220406-tctag.png)](assets/images/220406-tctag.png "Twin Cities Test Automation Group")
+
 ### April 13, 2022
 
 Denver Java User Group
@@ -33,8 +35,9 @@ Denver Java User Group
 Improving Developer Productivity through Continuous Regression Testing
 
 - [Registration Link](https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/)
+- [YouTube LiveStream](https://www.youtube.com/watch?v=6LtgbTdUJEQ)
 
-[![Denver Java User Group](assets/images/220413-djug.png)](assets/images/220413-djug.png "Denver Java User Group")
+[![Denver Java User Group](https://img.youtube.com/vi/6LtgbTdUJEQ/0.jpg)](https://www.youtube.com/watch?v=6LtgbTdUJEQ "Improving Developer Productivity through Continuous Regression Testing")
 
 ## Previous Talks
 
