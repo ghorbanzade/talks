@@ -18,16 +18,6 @@ Pejman is interested in problems related to the design and maintenance of softwa
 
 ## Upcoming Talks
 
-### April 6, 2022
-
-Twin Cities Test Automation Group
-
-Continuous Regression Testing, Benefits and Challenges
-
-- [Registration Link](https://www.meetup.com/TC-TAG/events/284654695/)
-
-[![Twin Cities Test Automation Group](assets/images/220406-tctag.png)](assets/images/220406-tctag.png "Twin Cities Test Automation Group")
-
 ### April 13, 2022
 
 Denver Java User Group
@@ -42,6 +32,16 @@ Improving Developer Productivity through Continuous Regression Testing
 ## Previous Talks
 
 > [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+
+### April 6, 2022
+
+Twin Cities Test Automation Group
+
+Continuous Regression Testing, Benefits and Challenges
+
+- [Registration Link](https://www.meetup.com/TC-TAG/events/284654695/)
+
+[![Twin Cities Test Automation Group](assets/images/220406-tctag.png)](assets/images/220406-tctag.png "Twin Cities Test Automation Group")
 
 ### March 28, 2022
 
