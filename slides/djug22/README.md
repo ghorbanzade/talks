@@ -1,11 +1,9 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+## Denver Java User Group
 
-To start the slide show:
+"Improving Developer Productivity through Continuous Regression Testing", Pejman Ghorbanzade, April 13, 2022
 
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
+- [Registration Link](https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/)
+- [YouTube Video](https://www.youtube.com/watch?v=6LtgbTdUJEQ)
+- Slides ([html](https://touca.io/talks/djug22), [pdf](https://touca.io/talks/djug22/slides-djug22-pejman.pdf))
 
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev on [documentations](https://sli.dev/).
+[![Denver Java User Group](https://img.youtube.com/vi/6LtgbTdUJEQ/0.jpg)](https://www.youtube.com/watch?v=6LtgbTdUJEQ "Improving Developer Productivity through Continuous Regression Testing")
