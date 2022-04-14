@@ -18,6 +18,18 @@ Pejman is interested in problems related to the design and maintenance of softwa
 
 ## Upcoming Talks
 
+### May 5, 2022
+
+Chicago Java User Group
+
+Continuous Regression Testing in Java
+
+- [Registration Link](https://www.meetup.com/ChicagoJUG/)
+
+## Previous Talks
+
+> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+
 ### April 13, 2022
 
 Denver Java User Group
@@ -25,13 +37,10 @@ Denver Java User Group
 Improving Developer Productivity through Continuous Regression Testing
 
 - [Registration Link](https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/)
-- [YouTube LiveStream](https://www.youtube.com/watch?v=6LtgbTdUJEQ)
+- [YouTube Video](https://www.youtube.com/watch?v=6LtgbTdUJEQ)
+- [Slides](https://github.com/ghorbanzade/talks/releases/download/v22.4/slides-djug22-pejman.pdf)
 
 [![Denver Java User Group](https://img.youtube.com/vi/6LtgbTdUJEQ/0.jpg)](https://www.youtube.com/watch?v=6LtgbTdUJEQ "Improving Developer Productivity through Continuous Regression Testing")
-
-## Previous Talks
-
-> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
 
 ### April 6, 2022
 
@@ -40,8 +49,6 @@ Twin Cities Test Automation Group
 Continuous Regression Testing, Benefits and Challenges
 
 - [Registration Link](https://www.meetup.com/TC-TAG/events/284654695/)
-
-[![Twin Cities Test Automation Group](assets/images/220406-tctag.png)](assets/images/220406-tctag.png "Twin Cities Test Automation Group")
 
 ### March 28, 2022
 
