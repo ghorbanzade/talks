@@ -38,7 +38,7 @@ Improving Developer Productivity through Continuous Regression Testing
 
 - [Registration Link](https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/)
 - [YouTube Video](https://www.youtube.com/watch?v=6LtgbTdUJEQ)
-- [Slides](https://github.com/ghorbanzade/talks/releases/download/v22.4/slides-djug22-pejman.pdf)
+- Slides ([html](https://touca.io/talks/djug22), [pdf](https://touca.io/talks/djug22/slides-djug22-pejman.pdf))
 
 [![Denver Java User Group](https://img.youtube.com/vi/6LtgbTdUJEQ/0.jpg)](https://www.youtube.com/watch?v=6LtgbTdUJEQ "Improving Developer Productivity through Continuous Regression Testing")
 
