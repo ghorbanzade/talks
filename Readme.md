@@ -24,7 +24,8 @@ Chicago Java User Group
 
 Continuous Regression Testing in Java
 
-- [Registration Link](https://www.meetup.com/ChicagoJUG/)
+- [Registration Link](https://www.meetup.com/ChicagoJUG/events/285406777/)
+
 
 ## Previous Talks
 
