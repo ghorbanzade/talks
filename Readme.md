@@ -18,6 +18,18 @@ Pejman is interested in problems related to the design and maintenance of softwa
 
 ## Upcoming Talks
 
+### May 12, 2022
+
+Twin Cities Python User Group
+
+Building Developer-Friendly Command-Line Tools in Python
+
+- [Registration Link](https://www.meetup.com/PyMNtos-Twin-Cities-Python-User-Group/events/285705542/)
+
+## Previous Talks
+
+> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+
 ### May 5, 2022
 
 Chicago Java User Group
@@ -25,11 +37,7 @@ Chicago Java User Group
 Continuous Regression Testing in Java
 
 - [Registration Link](https://www.meetup.com/ChicagoJUG/events/285406777/)
-
-
-## Previous Talks
-
-> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+- Slides ([html](https://touca.io/talks/cjug22/), [pdf](https://touca.io/talks/cjug22/slides-cjug22-pejman.pdf))
 
 ### April 13, 2022
 
@@ -40,8 +48,6 @@ Improving Developer Productivity through Continuous Regression Testing
 - [Registration Link](https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/)
 - [YouTube Video](https://www.youtube.com/watch?v=6LtgbTdUJEQ)
 - Slides ([html](https://touca.io/talks/djug22), [pdf](https://touca.io/talks/djug22/slides-djug22-pejman.pdf))
-
-[![Denver Java User Group](https://img.youtube.com/vi/6LtgbTdUJEQ/0.jpg)](https://www.youtube.com/watch?v=6LtgbTdUJEQ "Improving Developer Productivity through Continuous Regression Testing")
 
 ### April 6, 2022
 
