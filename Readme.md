@@ -16,7 +16,9 @@ Pejman is interested in problems related to the design and maintenance of softwa
 - [LinkedIn](https://linkedin.com/in/ghorbanzade)
 - [Website](https://pejman.dev)
 
-## Upcoming Talks
+## Previous Talks
+
+> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
 
 ### May 12, 2022
 
@@ -25,10 +27,6 @@ Twin Cities Python User Group
 Building Developer-Friendly Command-Line Tools in Python
 
 - [Registration Link](https://www.meetup.com/PyMNtos-Twin-Cities-Python-User-Group/events/285705542/)
-
-## Previous Talks
-
-> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
 
 ### May 5, 2022
 

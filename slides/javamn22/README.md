@@ -1,11 +1,5 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Java MN User Group
 
-To start the slide show:
+"Continuous Regression Testing in Java", Pejman Ghorbanzade, March 15, 2022
 
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
-
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev on [documentations](https://sli.dev/).
+- [Registration Link](https://www.meetup.com/Java-User-Group-Hosted-by-TEKsystems/events/284076315/)

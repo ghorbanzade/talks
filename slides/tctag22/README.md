@@ -1,11 +1,6 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
 
-To start the slide show:
+# Twin Cities Test Automation Group
 
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
+"Continuous Regression Testing, Benefits and Challenges", Pejman Ghorbanzade, April 6, 2022
 
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev on [documentations](https://sli.dev/).
+- [Registration Link](https://www.meetup.com/TC-TAG/events/284654695/)
