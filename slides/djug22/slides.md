@@ -367,6 +367,6 @@ layout: center
 # Questions
 
 - https://touca.io
-- https://github.com/trytouca/touca-java
+- https://github.com/trytouca/trytouca
 - https://twitter.com/heypejman
 - [pejman@touca.io](mailto:pejman@touca.io)

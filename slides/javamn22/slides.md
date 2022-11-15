@@ -210,7 +210,7 @@ layout: center
 
 # Questions
 
-- https://github.com/trytouca/touca-java
+- https://github.com/trytouca/trytouca
 - https://touca.io
 
 - https://twitter.com/heypejman
