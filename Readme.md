@@ -27,7 +27,7 @@ San Francisco Bay Area C++ User Group
 Finding regressions in mission critical software workflows
 
 - [Registration Link](https://www.meetup.com/cpp-bay-area/events/290564227/)
-- Slides ([html](https://touca.io/talks/cppbay23/), [pdf](https://touca.io/talks/cppbay23/slides-cppbay-pejman.pdf))
+- Slides ([html](https://touca.io/talks/cppbay23/), [pdf](https://touca.io/talks/cppbay23/slides-cppbay23-pejman.pdf))
 
 ![CppBayArea2023](./assets/images/230110-cppbayarea.png)
 
