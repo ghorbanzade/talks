@@ -2,11 +2,11 @@
 
 ## Speaker Bio
 
-Pejman Ghorbanzade is the Founder and CEO of [Touca.io](https://touca.io/), helping software engineers understand the true impact of their code changes on the behavior and performance of their software.
+Pejman Ghorbanzade is the Founder and CEO of [Touca.io](https://touca.io/), helping engineering teams find the unintended side-effects of their day to day code changes on the behavior and performance of their software.
 
 Before Touca, Pejman was a senior software engineer at Canon Medical Informatics building software for advanced visualization of medical images. Before that, he was a software engineer at VMware Carbon Black.
 
-Pejman is interested in problems related to the design and maintenance of software at scale and over time. He is passionate about solutions to improve stability and maintainability of products with large ever-changing codebases.
+Pejman is interested in problems related to the design and maintenance of software at scale and over time. He is passionate about solutions to improve stability and maintainability of products with large ever-changing code bases.
 
 ## Social Links
 
@@ -19,6 +19,17 @@ Pejman is interested in problems related to the design and maintenance of softwa
 ## Previous Talks
 
 > [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+
+### January 10, 2023
+
+San Francisco Bay Area C++ User Group
+
+Finding regressions in mission critical software workflows
+
+- [Registration Link](https://www.meetup.com/cpp-bay-area/events/290564227/)
+- Slides ([html](https://touca.io/talks/cppbay23/), [pdf](https://touca.io/talks/cppbay23/slides-cppbay-pejman.pdf))
+
+![CppBayArea2023](./assets/images/230110-cppbayarea.png)
 
 ### May 12, 2022
 
