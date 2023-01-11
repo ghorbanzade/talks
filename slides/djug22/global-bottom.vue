@@ -7,7 +7,7 @@
       <div v-if="$slidev.nav.currentLayout !== 'cover'">
           {{ $slidev.nav.currentPage }}
       </div>
-      <a href="https://touca.io" target="_blank" title="Tocua Website">
+      <a href="https://touca.io" target="_blank" title="Touca Website">
         touca.io
       </a>
     </div>

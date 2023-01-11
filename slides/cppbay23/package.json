@@ -10,5 +10,8 @@
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
   },
-  "name": "slidev"
+  "name": "slidev",
+  "devDependencies": {
+    "playwright-chromium": "^1.29.2"
+  }
 }
