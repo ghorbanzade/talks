@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "@ghorbanzade/talks",
+  "scripts": {
+    "build": "npm run build --workspaces --if-present"
+  },
+  "workspaces": [
+    "slides/*"
+  ],
+  "engines": {
+    "npm": ">=7.7.0"
+  },
+  "prettier": {
+    "proseWrap": "always",
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "htmlWhitespaceSensitivity": "ignore"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.40.3"
+  },
+  "dependencies": {
+    "@slidev/theme-default": "^0.21.2",
+    "@slidev/theme-seriph": "^0.21.3"
+  }
+}
