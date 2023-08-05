@@ -2,19 +2,32 @@
 
 ## Speaker Bio
 
-Pejman Ghorbanzade is the Founder and CEO of [Touca.io](https://touca.io/), helping engineering teams find the unintended side-effects of their day to day code changes on the behavior and performance of their software.
+Pejman Ghorbanzade is the Founder and CEO of [Touca.io](https://touca.io/),
+helping engineering teams find the unintended side-effects of their day to day
+code changes on the behavior and performance of their software.
 
-Before Touca, Pejman was a senior software engineer at Canon Medical Informatics building software for advanced visualization of medical images. Before that, he was a software engineer at VMware Carbon Black.
+Before Touca, Pejman was a senior software engineer at Canon Medical Informatics
+building software for advanced visualization of medical images. Before that, he
+was a software engineer at VMware Carbon Black.
 
-Pejman is interested in problems related to the design and maintenance of software at scale and over time. He is passionate about solutions to improve stability and maintainability of products with large ever-changing code bases.
+Pejman is interested in problems related to the design and maintenance of
+software at scale and over time. He is passionate about solutions to improve
+stability and maintainability of products with large ever-changing code bases.
 
 ## Social Links
 
 - [Profile Pictures](https://github.com/ghorbanzade/talks/tree/main/assets)
-- [Twitter](https://twitter.com/heypejman)
 - [GitHub](https://github.com/ghorbanzade)
 - [LinkedIn](https://linkedin.com/in/ghorbanzade)
 - [Website](https://pejman.dev)
+
+## Upcoming Talks
+
+### October 1, 2023
+
+CppCon, Aurora, CO
+
+Using Continuous Regression Testing for Faster and Safer Refactoring
 
 ## Previous Talks
 
@@ -27,7 +40,8 @@ San Francisco Bay Area C++ User Group
 Finding regressions in mission critical software workflows
 
 - [Registration Link](https://www.meetup.com/cpp-bay-area/events/290564227/)
-- Slides ([html](https://touca.io/talks/cppbay23/), [pdf](https://touca.io/talks/cppbay23/slides-cppbay23-pejman.pdf))
+- Slides ([html](https://touca.io/talks/cppbay23/),
+  [pdf](https://touca.io/talks/cppbay23/slides-cppbay23-pejman.pdf))
 
 ![CppBayArea2023](./assets/images/230110-cppbayarea.png)
 
@@ -46,7 +60,8 @@ Chicago Java User Group
 Continuous Regression Testing in Java
 
 - [Registration Link](https://www.meetup.com/ChicagoJUG/events/285406777/)
-- Slides ([html](https://touca.io/talks/cjug22/), [pdf](https://touca.io/talks/cjug22/slides-cjug22-pejman.pdf))
+- Slides ([html](https://touca.io/talks/cjug22/),
+  [pdf](https://touca.io/talks/cjug22/slides-cjug22-pejman.pdf))
 
 ### April 13, 2022
 
@@ -56,7 +71,8 @@ Improving Developer Productivity through Continuous Regression Testing
 
 - [Registration Link](https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/)
 - [YouTube Video](https://www.youtube.com/watch?v=6LtgbTdUJEQ)
-- Slides ([html](https://touca.io/talks/djug22), [pdf](https://touca.io/talks/djug22/slides-djug22-pejman.pdf))
+- Slides ([html](https://touca.io/talks/djug22),
+  [pdf](https://touca.io/talks/djug22/slides-djug22-pejman.pdf))
 
 ### April 6, 2022
 
@@ -93,14 +109,15 @@ Continuous Regression Testing Using Touca SDK for Java
 
 CppCon, Aurora, CO
 
-Building an Extensible Type Serialization System Using Partial Template Specialization
+Building an Extensible Type Serialization System Using Partial Template
+Specialization
 
 - [Registration Link](https://cppcon2021.sched.com/event/nvDM/building-an-extensible-type-serialization-system-using-partial-template-specialization)
 - [YouTube Video](https://youtu.be/2dvZR2zemrM)
 - [GitHub Repository](https://github.com/ghorbanzade/cppcon21)
 - [Slides](https://github.com/ghorbanzade/cppcon21/releases/download/v1.0/cppcon21-pejman-slides.pdf)
 
-[![CppCon2021](https://img.youtube.com/vi/2dvZR2zemrM/0.jpg)](https://www.youtube.com/watch?v=2dvZR2zemrM "Building an Extensible Type Serialization System Using Partial Template Specialization")
+[![CppCon2021](https://img.youtube.com/vi/2dvZR2zemrM/0.jpg)](https://www.youtube.com/watch?v=2dvZR2zemrM 'Building an Extensible Type Serialization System Using Partial Template Specialization')
 
 ### October 12, 2021
 
@@ -154,7 +171,7 @@ Regression Testing with Touca
 - [Listen on CppCast](https://cppcast.com/touca/)
 - [YouTube Video](https://youtu.be/Pw8ZD5WZYl0)
 
-[![CppCast](https://img.youtube.com/vi/Pw8ZD5WZYl0/0.jpg)](https://www.youtube.com/watch?v=Pw8ZD5WZYl0 "Regression Testing with Touca")
+[![CppCast](https://img.youtube.com/vi/Pw8ZD5WZYl0/0.jpg)](https://www.youtube.com/watch?v=Pw8ZD5WZYl0 'Regression Testing with Touca')
 
 ### August 18, 2021
 
