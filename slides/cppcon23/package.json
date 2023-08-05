@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "@ghorbanzade/cppcon23",
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  }
+}
