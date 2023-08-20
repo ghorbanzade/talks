@@ -3,7 +3,7 @@ theme: seriph
 class: ""
 highlighter: shiki
 lineNumbers: false
-info: Using Continuous Regression Testing for Faster and Safer Refactoring
+info: Continuous Regression Testing for Faster and Safer Refactoring
 drawings:
   persist: false
 layout: cover
@@ -11,7 +11,7 @@ download: "https://touca.io/talks/cppcon23/slides-cppcon23-pejman.pdf"
 background:
 ---
 
-# Using Continuous Regression Testing for Faster and Safer Refactoring
+# Continuous Regression Testing for Faster and Safer Refactoring
 
 ## CppCon, October 1, 2023
 
