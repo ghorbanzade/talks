@@ -1,0 +1,22 @@
+html {
+  --prism-background: #0d0d2b !important;
+  --slidev-code-font-size: 1rem !important;
+  --slidev-code-line-height: 1.5rem !important;
+  --slidev-code-padding: 1.5rem 1rem !important;
+  --slidev-code-margin: 1rem 0 !important;
+}
+#slide-content {
+  @apply bg-gradient-to-bl to-[#074b7a] from-[#0d0d2b];
+}
+.slidev-layout {
+  &.cover {
+    h1 {
+      @apply text-3xl font-800 text-left w-4/5 mx-auto leading-10 py-4;
+    }
+  }
+  &.default {
+    ul {
+      @apply list-disc text-xl;
+    }
+  }
+}
