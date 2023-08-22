@@ -11,6 +11,9 @@ drawings:
 download: 'https://touca.io/talks/cppcon21/slides-cppcon21-pejman.pdf'
 layout: image
 image: ./images/cppcon-cover.png
+title: 'CppCon 2021 - Pejman Ghorbanzade'
+fonts:
+  sans: 'Lato'
 ---
 
 ---

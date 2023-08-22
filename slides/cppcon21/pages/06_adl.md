@@ -7,7 +7,7 @@ slide: Agenda
 - The Basics
 - Practical Example
 - Concepts
-- <span class="text-yellow-500">Argument Dependent Lookup</span>
+- <span class="wsl-highlight">Argument Dependent Lookup</span>
 - Static Reflection
 
 ---
@@ -25,6 +25,15 @@ Argument-Dependent Lookup (ADL) enables the lookup of an unqualified function na
 ```cpp
 endl(std::cout);
 ```
+
+<!--
+- Name lookup
+- Function template name lookup
+- May involve argument-dependent lookup
+- Template argument deduction
+- Template argument substitution
+- Overload resolution
+-->
 
 ---
 layout: slide
@@ -46,6 +55,16 @@ struct Date {
   friend H AbslHashValue(H h, const Date& m);
 };
 ```
+
+<!--
+Can be used standalone as an alternative to std::hash but is also used by
+Swiss Table {flat/node}_hash{set/map} that Abseil provides.
+
+Advantages over std::hash:
+- Support for a large set of standard types
+- Extensible to support user-defined types
+- Easier to write thanks to hash::combine
+-->
 
 ---
 layout: slide

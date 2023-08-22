@@ -3,7 +3,7 @@ layout: slide
 slide: Agenda
 ---
 
-- <span class="text-yellow-500">Motivation</span>
+- <span class="wsl-highlight">Motivation</span>
 - The Basics
 - Practical Example
 - Concepts
@@ -11,37 +11,38 @@ slide: Agenda
 - Static Reflection
 
 ---
-layout: two-cols
+layout: slide
+section: Motivation
+slide: 'About Me'
 ---
 
-<SlideTitle chapter="Motivation" title="About Me" />
-
-Professional Software Engineer
-
-- Canon Medical Informatics
-- VMware Carbon Black
-
-Working full-time on touca.io
-
-- Continuous Regression Testing
-
-Passionate about maintaining software at scale
-
-::right::
-
-<div class="h-full grid place-content-center p-12">
-<img src="/images/vital_lung.jpg" class="rounded-xl" />
-<div class="text-[0.6rem] text-right py-2">
-<div>3D visualization of Lung CT</div>
-<div>Courtesy of Canon Medical Information</div>
+<div class="grid grid-cols-2 gap-x-4">
+  <div class="grid content-center">
+  <ul>
+  <li class="list-none">
+    <p>Professional Software Engineer</p>
+    <ul>
+      <li class="text-lg list-none">Canon Medical Informatics</li>
+      <li class="text-lg list-none">VMware Carbon Black</li>
+    </ul>
+  </li>
+  <li class="list-none">
+    <p>Working full-time on touca.io</p>
+    <ul>
+      <li class="text-lg list-none">Continuous Regression Testing</li>
+    </ul>
+  </li>
+  <li class="list-none text-lg py-2">Passionate about maintaining software at scale</li>
+  </ul>
+  </div>
+  <div class="h-full grid place-content-center px-12">
+    <img src="/images/vital_lung.jpg" class="rounded-xl" />
+    <div class="text-[0.6rem] text-right py-2">
+      <div>3D visualization of Lung CT</div>
+      <div>Courtesy of Canon Medical Information</div>
+    </div>
+  </div>
 </div>
-</div>
-
-<style>
-ul {
-  @apply list-disc;
-}
-</style>
 
 ---
 layout: slide

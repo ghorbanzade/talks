@@ -8,7 +8,7 @@ slide: Agenda
 - Practical Example
 - Concepts
 - Argument Dependent Lookup
-- <span class="text-yellow-500">Static Reflection</span>
+- <span class="wsl-highlight">Static Reflection</span>
 
 ---
 layout: slide
@@ -80,6 +80,13 @@ template <typename T> std::string get_type_name() {
 get_type_name<std::string>() // -> "basic_string"
 get_type_name<int>() // -> "int"
 ```
+
+<!--
+ISO/IEC 23619:2021(E):
+
+> The reflexpr-specifier evaluates to an unnamed type that allows inspection
+> of some properties of its operand through type traits or type transformations
+-->
 
 ---
 layout: slide

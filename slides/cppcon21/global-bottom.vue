@@ -1,7 +1,7 @@
 <template>
   <footer class="absolute bottom-0 py-4 px-14 w-full">
     <div
-      class="flex justify-between items-center text-sm font-medium text-sky-400"
+      class="flex justify-between items-center text-sm font-medium dark:text-sky-400"
     >
       <a
         href="https://twitter.com/heypejman"

@@ -2,13 +2,15 @@
 
 ## Speaker Bio
 
-Pejman Ghorbanzade is the Founder and CEO of [Touca.io](https://touca.io/),
-helping engineering teams find the unintended side-effects of their day to day
-code changes on the behavior and performance of their software.
+Pejman Ghorbanzade is a staff software engineer at
+[Aurora](https://aurora.tech), helping deliver the benefits of self-driving
+technology safely, quickly, and broadly.
 
-Before Touca, Pejman was a senior software engineer at Canon Medical Informatics
-building software for advanced visualization of medical images. Before that, he
-was a software engineer at VMware Carbon Black.
+Before joining Aurora, he was the founder and CEO of
+[Touca.io](https://touca.io), a developer-tools startup helping engineering
+teams find the unintended side-effects of day-to-day code changes on the
+behavior and performance of their software. Before that, he worked at Canon
+Medical Informatics and VMware Carbon Black.
 
 Pejman is interested in problems related to the design and maintenance of
 software at scale and over time. He is passionate about solutions to improve
@@ -16,10 +18,10 @@ stability and maintainability of products with large ever-changing code bases.
 
 ## Social Links
 
-- [Profile Pictures](https://github.com/ghorbanzade/talks/tree/main/assets)
-- [GitHub](https://github.com/ghorbanzade)
 - [LinkedIn](https://linkedin.com/in/ghorbanzade)
+- [GitHub](https://github.com/ghorbanzade)
 - [Website](https://pejman.dev)
+- [Profile Pictures](https://github.com/ghorbanzade/talks/tree/main/assets)
 
 ## Upcoming Talks
 
@@ -27,7 +29,7 @@ stability and maintainability of products with large ever-changing code bases.
 
 CppCon, Aurora, CO
 
-Using Continuous Regression Testing for Faster and Safer Refactoring
+Continuous Regression Testing for Faster and Safer Refactoring
 
 ## Previous Talks
 

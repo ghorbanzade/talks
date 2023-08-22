@@ -5,7 +5,7 @@ slide: Agenda
 
 - Motivation
 - The Basics
-- <span class="text-yellow-500">Practical Example</span>
+- <span class="wsl-highlight">Practical Example</span>
 - Concepts
 - Argument Dependent Lookup
 - Static Reflection

@@ -4,7 +4,7 @@ slide: Agenda
 ---
 
 - Motivation
-- <span class="text-yellow-500">The Basics</span>
+- <span class="wsl-highlight">The Basics</span>
 - Practical Example
 - Concepts
 - Argument Dependent Lookup
@@ -95,7 +95,7 @@ section: 'The Basics'
 slide: 'com.google.gson'
 ---
 
-Type adapters are introduced <span class="text-yellow-500">at runtime</span> and
+Type adapters are introduced <span class="wsl-highlight">at runtime</span> and
 considered during serialization of any given value.
 
 ```cpp
