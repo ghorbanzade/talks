@@ -1,6 +1,6 @@
 ---
 layout: slide
-slide: 'Agenda'
+slide: Agenda
 ---
 
 - Motivation

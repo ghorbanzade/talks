@@ -1,7 +1,7 @@
 html {
   --prism-background: #0d0d2b !important;
-  --slidev-code-font-size: 1rem !important;
-  --slidev-code-line-height: 1.5rem !important;
+  --slidev-code-font-size: 0.9rem !important;
+  --slidev-code-line-height: 1.3rem !important;
   --slidev-code-padding: 1.5rem 1rem !important;
   --slidev-code-margin: 0.25rem 0 !important;
 }
