@@ -1,4 +1,7 @@
-<Slide title="Agenda">
+---
+layout: slide
+slide: Agenda
+---
 
 - Motivation
 - <span class="text-yellow-500">The Basics</span>
@@ -7,11 +10,11 @@
 - Argument Dependent Lookup
 - Static Reflection
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Function Overloading">
+layout: slide
+section: 'The Basics'
+slide: 'Function Overloading'
+---
 
 ```cpp
 void check(const std::string& key, const boolean_t value);
@@ -27,11 +30,11 @@ void check(const std::string& key, const string_t& value);
 <span>Extensible design to support user-defined types</span>
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Callback Functions">
+layout: slide
+section: 'The Basics'
+slide: 'Callback Functions'
+---
 
 ```cpp
 check("some-date", [&date]() {
@@ -47,11 +50,11 @@ check("some-date", [&date]() {
 <span>Intrinsic support for common types</span>
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Polymorphism">
+layout: slide
+section: 'The Basics'
+slide: 'Polymorphism'
+---
 
 ```cpp
 struct Date : public Serializable {
@@ -66,11 +69,11 @@ struct Date : public Serializable {
 <span>Intuitive Developer Experience</span>
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="com.google.gson">
+layout: slide
+section: 'The Basics'
+slide: 'com.google.gson'
+---
 
 ```cpp
 private class MyDateSerializer implements
@@ -86,11 +89,11 @@ private class MyDateSerializer implements
 }
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="com.google.gson">
+layout: slide
+section: 'The Basics'
+slide: 'com.google.gson'
+---
 
 Type adapters are introduced <span class="text-yellow-500">at runtime</span> and
 considered during serialization of any given value.
@@ -103,11 +106,11 @@ final Gson gson = new GsonBuilder()
 
 Runtime resolution is slow and inefficient. We can do much better in C++.
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Simple Example">
+layout: slide
+section: 'The Basics'
+slide: 'Simple Example'
+---
 
 ```cpp
 struct Date {
@@ -121,11 +124,11 @@ struct Date {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="std::ostream">
+layout: slide
+section: 'The Basics'
+slide: 'std::ostream'
+---
 
 ```cpp
 struct Date {
@@ -141,11 +144,11 @@ std::ostream &operator <<(std::ostream &o, const Date &date) {
 }
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="QDataStream">
+layout: slide
+section: 'The Basics'
+slide: 'QDataStream'
+---
 
 ```cpp
 QFile file("file.dat");
@@ -160,11 +163,11 @@ QDataStream& operator<<(QDataStream&, const Date&);
 QDataStream& operator>>(QDataStream&, Data&);
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="boost::serialization">
+layout: slide
+section: 'The Basics'
+slide: 'boost::serialization'
+---
 
 ```cpp
 namespace boost {
@@ -182,11 +185,11 @@ void serialize(Archive& archive, Date& date, const unsigned int version)
 } // namespace boost
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="boost::serialization">
+layout: slide
+section: 'The Basics'
+slide: 'boost::serialization'
+---
 
 ```cpp
 struct Date {
@@ -204,11 +207,11 @@ private:
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="std::format">
+layout: slide
+section: 'The Basics'
+slide: 'std::format'
+---
 
 ```cpp
 template <>
@@ -224,11 +227,11 @@ struct std::formatter<Date> : std::formatter<std::string> {
 <span>(since C++20)</span>
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Function Template Specialization">
+layout: slide
+section: 'The Basics'
+slide: 'Function Template Specialization'
+---
 
 ```cpp
 template <typename T>
@@ -244,11 +247,11 @@ void print(const Date& date) {
 }
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Function Template Specialization">
+layout: slide
+section: 'The Basics'
+slide: 'Function Template Specialization'
+---
 
 ```cpp
 void print(auto arg) { std::cout << arg << std::endl; }
@@ -260,11 +263,11 @@ void print(const Date& date) {
 }
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Class Template Specialization">
+layout: slide
+section: 'The Basics'
+slide: 'Class Template Specialization'
+---
 
 ```cpp
 template <typename T>
@@ -282,11 +285,11 @@ struct printer<Date> {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="std::hash">
+layout: slide
+section: 'The Basics'
+slide: 'std::hash'
+---
 
 ```cpp
 template <>
@@ -297,11 +300,11 @@ struct std::hash<Date> {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Partial Template Specialization">
+layout: slide
+section: 'The Basics'
+slide: 'Partial Template Specialization'
+---
 
 ```cpp
 template <typename T, typename U>
@@ -310,9 +313,7 @@ struct printer {
     std::cout << prefix << value << std::endl;
   }
 };
-```
 
-```cpp
 template <typename T>
 struct printer<T, Date> {
   void print(T prefix, Date value) {
@@ -321,11 +322,11 @@ struct printer<T, Date> {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="std::enable_if">
+layout: slide
+section: 'The Basics'
+slide: 'std::enable_if'
+---
 
 ```cpp
 template<bool B, class T = void>
@@ -335,11 +336,11 @@ template<class T>
 struct enable_if<true, T> { typedef T type; };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Substitution Failure is not an Error">
+layout: slide
+section: 'The Basics'
+slide: 'Substitution Failure is not an Error'
+---
 
 ```cpp
 template <typename T, typename Enabled = void>
@@ -354,11 +355,11 @@ struct printer<T,
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Helper Types">
+layout: slide
+section: 'The Basics'
+slide: 'Helper Types'
+---
 
 ```cpp
 template <bool B, class T = void>
@@ -370,11 +371,11 @@ template <class T, class U>
 constexpr bool is_same_v = is_same<T, U>::value;
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="The Basics" title="Leveraging Helper Types">
+layout: slide
+section: 'The Basics'
+slide: 'Leveraging Helper Types'
+---
 
 ```cpp
 template <typename T, typename = void>
@@ -391,5 +392,3 @@ struct printer<T, std::enable_if_t<std::is_same_v<T, Date>>> {
 <div class="text-xs flex w-full items-end justify-end space-x-1">
 <span>(since C++17)</span>
 </div>
-
-</Slide>

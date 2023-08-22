@@ -1,4 +1,7 @@
-<Slide title="Agenda">
+---
+layout: slide
+slide: Agenda
+---
 
 - <span class="text-yellow-500">Motivation</span>
 - The Basics
@@ -6,8 +9,6 @@
 - Concepts
 - Argument Dependent Lookup
 - Static Reflection
-
-</Slide>
 
 ---
 layout: two-cols
@@ -29,7 +30,7 @@ Passionate about maintaining software at scale
 ::right::
 
 <div class="h-full grid place-content-center p-12">
-<img src="/img/vital_lung.jpg" class="rounded-xl" />
+<img src="/images/vital_lung.jpg" class="rounded-xl" />
 <div class="text-[0.6rem] text-right py-2">
 <div>3D visualization of Lung CT</div>
 <div>Courtesy of Canon Medical Information</div>
@@ -43,18 +44,20 @@ ul {
 </style>
 
 ---
-
-<Slide chapter="Motivation" title="The Problem">
+layout: slide
+section: Motivation
+slide: 'The Problem'
+---
 
 <div class="text-2xl w-3/5 leading-10">
 How can we refactor half a million lines of code without causing any side effects?
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="Motivation" title="Candidate Solution A">
+layout: slide
+section: Motivation
+slide: 'Candidate Solution A'
+---
 
 ```cpp
 auto new_output = new_system(testcase);
@@ -68,11 +71,11 @@ compare(new_output, old_output);
 - Test system is inefficient to run
 - Test system is not reuseable
 
-</Slide>
-
 ---
-
-<Slide chapter="Motivation" title="Candidate Solution B">
+layout: slide
+section: Motivation
+slide: 'Candidate Solution B'
+---
 
 ```cpp
 auto new_output = new_system(testcase);
@@ -87,11 +90,11 @@ compare(new_file, new_output);
 - Test system is hard to maintain
 - Test system is not reusable
 
-</Slide>
-
 ---
-
-<Slide chapter="Motivation" title="Candidate Solution C">
+layout: slide
+section: Motivation
+slide: 'Candidate Solution C'
+---
 
 ```cpp
 auto new_output = new_system(testcase);
@@ -105,11 +108,11 @@ submit(testcase, new_description);
 - Overkill for small projects
 - Requires remote computing resources
 
-</Slide>
-
 ---
-
-<Slide chapter="Motivation" title="Simple Example">
+layout: slide
+section: Motivation
+slide: 'Simple Example'
+---
 
 ```cpp
 struct Student {
@@ -122,11 +125,11 @@ struct Student {
 Student find_student(const std::string& username);
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Motivation" title="High-level API">
+layout: slide
+section: Motivation
+slide: 'High-level API'
+---
 
 ```cpp
 #include "students.hpp"
@@ -150,16 +153,14 @@ https://github.com/trytouca/trytouca
 </a>
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="Motivation" title="Design Requirements">
+layout: slide
+section: Motivation
+slide: 'Design Requirements'
+---
 
 - Intuitive developer experience
 - Intrinsic support for common types
   - Must support integral types, floating point types, string-like types, containers, and other common standard types
 - Extensible design to support user-defined types
   - Must allow users to introduce logic for handling custom types
-
-</Slide>

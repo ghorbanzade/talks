@@ -1,4 +1,7 @@
-<Slide title="Agenda">
+---
+layout: slide
+slide: Agenda
+---
 
 - Motivation
 - The Basics
@@ -7,11 +10,11 @@
 - Argument Dependent Lookup
 - Static Reflection
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="User-facing API">
+layout: slide
+section: 'Practical Example'
+slide: 'User-facing API'
+---
 
 ```cpp
 check("some-boolean", true);
@@ -24,11 +27,11 @@ check("some-map",
                                   {"yesterday", Date(2020, 10, 28)}});
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Perfect Forwarding">
+layout: slide
+section: 'Practical Example'
+slide: 'Perfect Forwarding'
+---
 
 ```cpp
 template <typename Char, typename Value>
@@ -38,11 +41,11 @@ void check(Char&& key, const Value& value) {
 }
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing User-defined Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing User-defined Types'
+---
 
 ```cpp
 template <>
@@ -56,11 +59,11 @@ struct serializer<Date> {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Primary Template">
+layout: slide
+section: 'Practical Example'
+slide: 'Primary Template'
+---
 
 ```cpp
 template <typename T, typename = void>
@@ -74,11 +77,11 @@ struct serializer {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Basic Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Basic Types'
+---
 
 <div class="grid grid-cols-2 gap-2">
 <div>
@@ -114,11 +117,11 @@ enum class internal_type : std::uint8_t {
 </div>
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Data Storage">
+layout: slide
+section: 'Practical Example'
+slide: 'Data Storage'
+---
 
 <div class="grid grid-cols-2 gap-2">
 <div>
@@ -155,11 +158,11 @@ using number_double_t = double;
 </div>
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Type Wrapper">
+layout: slide
+section: 'Practical Example'
+slide: 'Type Wrapper'
+---
 
 ```cpp
 class generic_value {
@@ -177,11 +180,11 @@ class generic_value {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Boolean Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Boolean Types'
+---
 
 ```cpp
 template <typename T>
@@ -190,11 +193,11 @@ struct serializer<T, std::enable_if_t<std::is_same_v<T, bool>>> {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Boolean Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Boolean Types'
+---
 
 ```cpp
 template <typename T>
@@ -208,11 +211,11 @@ struct serializer<T, std::enable_if_t<is_boolean_v<T>>> {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Numeric Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Numeric Types'
+---
 
 ```cpp
 template <typename T>
@@ -223,11 +226,11 @@ struct serializer<T, std::enable_if_t<is_number_signed_v<T>>> {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Numeric Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Numeric Types'
+---
 
 ```cpp
 template <typename T, typename = void>
@@ -246,11 +249,11 @@ struct is_number_signed<
 <span>We can do better</span>
 </div>
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Numeric Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Numeric Types'
+---
 
 ```cpp
 template <typename T>
@@ -260,12 +263,11 @@ constexpr bool is_number_signed_v =
                        std::is_signed<T>>;
 ```
 
-</Slide>
-
 ---
-
-
-<Slide chapter="Practical Example" title="Specializing for String-like Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for String-like Types'
+---
 
 ```cpp
 template <typename T>
@@ -274,11 +276,11 @@ using is_string =
                      std::is_constructible<std::wstring, T>>;
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Containers - Attempt 1">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Containers - Attempt 1'
+---
 
 ```cpp
 template <typename T, typename = void>
@@ -296,11 +298,11 @@ struct is_array<std::vector<args...>> : std::true_type {};
 /** and so it goes */
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Helper Trait: is_specialization">
+layout: slide
+section: 'Practical Example'
+slide: 'Helper Trait: is_specialization'
+---
 
 ```cpp
 template <typename Test, template <typename...> class Ref>
@@ -310,11 +312,11 @@ template <template <typename...> class Ref, typename... Args>
 struct is_specialization<Ref<Args...>, Ref> : std::true_type {};
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Containers - Attempt 2">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Containers - Attempt 2'
+---
 
 ```cpp
 template <typename T>
@@ -327,11 +329,11 @@ struct is_array<T, enable_if_t<disjunction<
     is_specialization<T, std::vector>>::value>> : std::true_type {};
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Helper Trait: is_iterable">
+layout: slide
+section: 'Practical Example'
+slide: 'Helper Trait: is_iterable'
+---
 
 ```cpp
 template <typename T, typename = void>
@@ -343,11 +345,11 @@ struct is_iterable<T, void_t<decltype(std::begin(std::declval<T>())),
     : std::true_type {};
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Containers - Attempt 3">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Containers - Attempt 3'
+---
 
 ```cpp
 template <typename T>
@@ -355,11 +357,11 @@ using is_array =
     std::conjunction<std::negation<is_string<T>>, is_iterable<T>>;
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for Containers - Attempt 4">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for Containers - Attempt 4'
+---
 
 ```cpp
 template <typename T>
@@ -374,11 +376,11 @@ struct serializer<T, std::enable_if_t<is_array<T>::value>> {
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for other Standard Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for other Standard Types'
+---
 
 ```cpp
 template <typename T>
@@ -392,11 +394,11 @@ struct serializer<T,
 };
 ```
 
-</Slide>
-
 ---
-
-<Slide chapter="Practical Example" title="Specializing for other Standard Types">
+layout: slide
+section: 'Practical Example'
+slide: 'Specializing for other Standard Types'
+---
 
 <div class="grid grid-cols-4 gap-2">
 <div>
@@ -416,5 +418,3 @@ struct serializer<T,
 </div>
 </div>
 </div>
-
-</Slide>
