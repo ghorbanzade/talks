@@ -1,53 +1,28 @@
 ---
 theme: seriph
-class: ""
-highlighter: shiki
+class: ''
+highlighter: prism
 lineNumbers: false
 info: Continuous Regression Testing for Faster and Safer Refactoring
 drawings:
   persist: false
-layout: cover
-download: "https://touca.io/talks/cppcon23/slides-cppcon23-pejman.pdf"
-background:
+download: 'https://touca.io/talks/cppcon23/slides-cppcon23-pejman.pdf'
+layout: image
+image: ./images/cppcon-cover.png
+title: 'CppCon 2023 - Pejman Ghorbanzade'
+fonts:
+  sans: 'Lato'
 ---
 
-# Continuous Regression Testing for Faster and Safer Refactoring
-
-## CppCon, October 1, 2023
-
-Pejman Ghorbanzade
-
-<style>
-h1 {
-  font-size: 1.75rem !important;
-}
-h2 {
-  font-size: 1.25rem !important;
-}
-</style>
-
 ---
-layout: two-cols
+src: ./pages/01_intro.md
 ---
 
-<div class="h-full grid place-content-center">
-<div class="m-24">
-<img border="rounded-full" src="/images/pejman.jpg" />
-</div>
-</div>
+---
+layout: center
+---
 
-::right::
-
-<div class="h-full pl-16">
-<div class="h-24" />
-
-# Questions
-
-<div class="h-8" />
-
-- https://touca.io
-- https://github.com/trytouca/trytouca
-- https://linkedin.com/in/ghorbanzade
-- [pejman@touca.io](mailto:pejman@touca.io)
-
+<div class="text-center space-y-8">
+<div class="text-4xl font-600">Questions</div>
+<a href="https://github.com/ghorbanzade/cppcon23" target="_blank" class="font-mono text-lg block">https://github.com/ghorbanzade/cppcon23</a>
 </div>
