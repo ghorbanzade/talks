@@ -50,7 +50,7 @@ slide: 'This talk will not include...'
 ---
 layout: slide
 section: 'Intro'
-title: 'This talk attempts to...'
+slide: 'This talk attempts to...'
 ---
 
 - Review language features for building extensible libraries
