@@ -25,11 +25,15 @@ stability and maintainability of products with large ever-changing code bases.
 
 ## Upcoming Talks
 
-### October 1, 2023
+### October 2, 2023
 
-CppCon, Aurora, CO
+CppCon, The C++ Conference, Aurora, CO
 
-Continuous Regression Testing for Faster and Safer Refactoring
+Continuous Regression Testing for Safer and Faster Refactoring
+
+- [Registration Link](https://cppcon2023.sched.com/event/1Qtgx/continuous-regression-testing-for-safer-and-faster-refactoring)
+
+![CppCon2023](./slides/cppcon23/images/230827-cppcon.png)
 
 ## Previous Talks
 
@@ -44,8 +48,6 @@ Finding regressions in mission critical software workflows
 - [Registration Link](https://www.meetup.com/cpp-bay-area/events/290564227/)
 - Slides ([html](https://touca.io/talks/cppbay23/),
   [pdf](https://touca.io/talks/cppbay23/slides-cppbay23-pejman.pdf))
-
-![CppBayArea2023](./assets/images/230110-cppbayarea.png)
 
 ### May 12, 2022
 

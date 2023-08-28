@@ -32,7 +32,7 @@ layout: two-cols
 
 <div class="h-full grid place-content-center">
 <div class="m-24">
-<img border="rounded-full" src="/img/pejman.jpg" />
+<img border="rounded-full" src="/images/pejman.jpg" />
 </div>
 </div>
 
