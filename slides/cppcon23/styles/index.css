@@ -16,12 +16,12 @@ html.dark {
 }
 
 #slide-content {
-  @apply dark:bg-gradient-to-bl dark:to-[#074b7a] dark:from-[#0d0d2b];
+  @apply dark:bg-gradient-to-bl dark:from-[#0d0d2b] dark:to-[#074b7a];
 }
 .slidev-layout {
   &.cover {
     h1 {
-      @apply text-5xl font-800 text-left w-4/5 mx-auto leading-16 py-4;
+      @apply text-4xl font-800 text-left w-4/5 mx-auto leading-12 py-4;
     }
   }
   &.default {

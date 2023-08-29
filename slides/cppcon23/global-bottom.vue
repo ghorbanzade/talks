@@ -10,7 +10,12 @@
         </span>
       </div>
       <div class="text-xs text-right">
-        <a href="https://aurora.tech" target="_blank" title="Aurora Innovation">
+        <a
+          v-if="$slidev.nav.currentLayout !== 'cover'"
+          href="https://aurora.tech"
+          target="_blank"
+          title="Aurora Innovation"
+        >
           Aurora Innovation &copy; 2023
         </a>
       </div>

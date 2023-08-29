@@ -14,6 +14,15 @@ fonts:
   sans: 'Lato'
 ---
 
+<!--
+Good Afternoon, everyone!
+
+It is great to be back at CppCon!
+
+Thank you for choosing to spend your time here with me and
+I hope that you would find this talk worthwhile and insightful.
+-->
+
 ---
 src: ./pages/01_intro.md
 ---
