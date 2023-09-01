@@ -1,5 +1,4 @@
 ---
-layout: slide
 slide: Agenda
 ---
 
@@ -11,7 +10,6 @@ slide: Agenda
 - Static Reflection
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'User-facing API'
 ---
@@ -28,7 +26,6 @@ check("some-map",
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Perfect Forwarding'
 ---
@@ -42,7 +39,6 @@ void check(Char&& key, const Value& value) {
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing User-defined Types'
 ---
@@ -60,7 +56,6 @@ struct serializer<Date> {
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Primary Template'
 ---
@@ -78,7 +73,6 @@ struct serializer {
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Basic Types'
 ---
@@ -118,7 +112,6 @@ enum class internal_type : std::uint8_t {
 </div>
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Data Storage'
 ---
@@ -159,7 +152,6 @@ using number_double_t = double;
 </div>
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Type Wrapper'
 ---
@@ -181,7 +173,6 @@ class generic_value {
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Boolean Types'
 ---
@@ -194,7 +185,6 @@ struct serializer<T, std::enable_if_t<std::is_same_v<T, bool>>> {
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Boolean Types'
 ---
@@ -212,7 +202,6 @@ struct serializer<T, std::enable_if_t<is_boolean_v<T>>> {
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Numeric Types'
 ---
@@ -227,7 +216,6 @@ struct serializer<T, std::enable_if_t<is_number_signed_v<T>>> {
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Numeric Types'
 ---
@@ -250,7 +238,6 @@ struct is_number_signed<
 </div>
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Numeric Types'
 ---
@@ -264,7 +251,6 @@ constexpr bool is_number_signed_v =
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for String-like Types'
 ---
@@ -277,7 +263,6 @@ using is_string =
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Containers - Attempt 1'
 ---
@@ -299,7 +284,6 @@ struct is_array<std::vector<args...>> : std::true_type {};
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Helper Trait: is_specialization'
 ---
@@ -313,7 +297,6 @@ struct is_specialization<Ref<Args...>, Ref> : std::true_type {};
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Containers - Attempt 2'
 ---
@@ -330,7 +313,6 @@ struct is_array<T, enable_if_t<disjunction<
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Helper Trait: is_iterable'
 ---
@@ -346,7 +328,6 @@ struct is_iterable<T, void_t<decltype(std::begin(std::declval<T>())),
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Containers - Attempt 3'
 ---
@@ -358,7 +339,6 @@ using is_array =
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for Containers - Attempt 4'
 ---
@@ -377,7 +357,6 @@ struct serializer<T, std::enable_if_t<is_array<T>::value>> {
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for other Standard Types'
 ---
@@ -395,7 +374,6 @@ struct serializer<T,
 ```
 
 ---
-layout: slide
 section: 'Practical Example'
 slide: 'Specializing for other Standard Types'
 ---

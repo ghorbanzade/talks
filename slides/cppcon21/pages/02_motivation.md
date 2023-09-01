@@ -1,5 +1,4 @@
 ---
-layout: slide
 slide: Agenda
 ---
 
@@ -11,7 +10,6 @@ slide: Agenda
 - Static Reflection
 
 ---
-layout: slide
 section: Motivation
 slide: 'About Me'
 ---
@@ -45,7 +43,6 @@ slide: 'About Me'
 </div>
 
 ---
-layout: slide
 section: Motivation
 slide: 'The Problem'
 ---
@@ -55,7 +52,6 @@ How can we refactor half a million lines of code without causing any side effect
 </div>
 
 ---
-layout: slide
 section: Motivation
 slide: 'Candidate Solution A'
 ---
@@ -73,7 +69,6 @@ compare(new_output, old_output);
 - Test system is not reuseable
 
 ---
-layout: slide
 section: Motivation
 slide: 'Candidate Solution B'
 ---
@@ -92,7 +87,6 @@ compare(new_file, new_output);
 - Test system is not reusable
 
 ---
-layout: slide
 section: Motivation
 slide: 'Candidate Solution C'
 ---
@@ -110,7 +104,6 @@ submit(testcase, new_description);
 - Requires remote computing resources
 
 ---
-layout: slide
 section: Motivation
 slide: 'Simple Example'
 ---
@@ -127,7 +120,6 @@ Student find_student(const std::string& username);
 ```
 
 ---
-layout: slide
 section: Motivation
 slide: 'High-level API'
 ---
@@ -155,7 +147,6 @@ https://github.com/trytouca/trytouca
 </div>
 
 ---
-layout: slide
 section: Motivation
 slide: 'Design Requirements'
 ---

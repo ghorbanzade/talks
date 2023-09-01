@@ -37,7 +37,6 @@ background:
 </div>
 
 ---
-layout: slide
 section: 'Intro'
 slide: 'This talk will not include...'
 ---
@@ -48,7 +47,6 @@ slide: 'This talk will not include...'
 - An endorsement of any one method for creating extension points
 
 ---
-layout: slide
 section: 'Intro'
 slide: 'This talk attempts to...'
 ---

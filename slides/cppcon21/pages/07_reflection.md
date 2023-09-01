@@ -1,5 +1,4 @@
 ---
-layout: slide
 slide: Agenda
 ---
 
@@ -11,7 +10,6 @@ slide: Agenda
 - <span class="wsl-highlight">Static Reflection</span>
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'User-facing API'
 ---
@@ -28,7 +26,6 @@ check("some-map",
 ```
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'Current Status'
 ---
@@ -41,7 +38,6 @@ Proposals
 Circle Compiler (with Different Syntax)
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'Relevant Talks'
 ---
@@ -62,7 +58,6 @@ slide: 'Relevant Talks'
 </div>
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'TS Draft (N4856)'
 ---
@@ -89,7 +84,6 @@ ISO/IEC 23619:2021(E):
 -->
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'TS Draft (N4856)'
 ---
@@ -105,7 +99,6 @@ std::cout << reflect::get_name_v<member_t>
 ```
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'Constxpr Reflexpr (P0953)'
 ---
@@ -130,7 +123,6 @@ void to_json_impl(const T& object) {
 ```
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'Value-based Reflection (P2320)'
 ---
@@ -144,7 +136,6 @@ template for (constexpr meta::info member : meta::members_of(^Date)) {
 ```
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'Value-based Reflection (P2320)'
 ---
@@ -167,7 +158,6 @@ void to_json(const T& object) {
 ```
 
 ---
-layout: slide
 section: 'Static Reflection'
 slide: 'Conclusion'
 ---

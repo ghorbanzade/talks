@@ -1,5 +1,4 @@
 ---
-layout: slide
 slide: Agenda
 ---
 
@@ -11,7 +10,6 @@ slide: Agenda
 - Static Reflection
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'The Basics'
 ---
@@ -25,7 +23,6 @@ slide: 'The Basics'
   - Faster compilation time
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'The Basics'
 ---
@@ -45,7 +42,6 @@ void foo(CONDITION auto t) {}
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'The Basics'
 ---
@@ -68,7 +64,6 @@ void printer(const T& value) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'The Basics'
 ---
@@ -89,7 +84,6 @@ void printer(const HasToString auto& value) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Reconsidering our Approach'
 ---
@@ -102,7 +96,6 @@ void check(Char&& key, const Value& value) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Specializing Basic Types'
 ---
@@ -120,7 +113,6 @@ generic_value serialize(const bool value) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Specializing Numeric Types'
 ---
@@ -137,7 +129,6 @@ generic_value serialize(const Arithmetic auto& value) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Specializing String Types'
 ---
@@ -155,7 +146,6 @@ generic_value serialize(const StringLike auto& value) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Specializing Fixed-Sized Arrays'
 ---
@@ -168,7 +158,6 @@ generic_value serialize(const Char (&value)[N]) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Helper Trait: is_iterable'
 ---
@@ -189,7 +178,6 @@ struct is_iterable<T, void_t<decltype(std::declval<T>().begin()),
 </div>
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Helper Concept: Iterable'
 ---
@@ -208,7 +196,6 @@ concept Iterable = requires(const T x) {
 </div>
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Helper Concept: Container'
 ---
@@ -231,7 +218,6 @@ concept Container = requires(T a, const T b) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Helper Concept: Container'
 ---
@@ -254,7 +240,6 @@ concept Container = requires(T a, const T b) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Helper Concept: Container'
 ---
@@ -277,7 +262,6 @@ concept Container = requires(T a, const T b) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Specializing for Containers'
 ---
@@ -298,7 +282,6 @@ generic_value serialize(const ArrayLike auto& values) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Taking a Step Back'
 ---
@@ -316,7 +299,6 @@ struct Date {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Specializing for User-defined Types'
 ---
@@ -335,7 +317,6 @@ generic_value serialize(const Serializable auto& value) {
 ```
 
 ---
-layout: slide
 section: 'Concepts'
 slide: 'Handling unsupported types'
 ---

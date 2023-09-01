@@ -1,5 +1,4 @@
 ---
-layout: slide
 slide: Agenda
 ---
 
@@ -11,7 +10,6 @@ slide: Agenda
 - Static Reflection
 
 ---
-layout: slide
 section: 'Argument Dependent Lookup'
 slide: 'The Basics'
 ---
@@ -36,7 +34,6 @@ endl(std::cout);
 -->
 
 ---
-layout: slide
 section: 'Argument Dependent Lookup'
 slide: 'absl::Hash'
 ---
@@ -67,7 +64,6 @@ Advantages over std::hash:
 -->
 
 ---
-layout: slide
 section: 'Argument Dependent Lookup'
 slide: 'absl::Hash'
 ---
@@ -87,7 +83,6 @@ H AbslHashValue(Hash h, const Date& date) {
 ```
 
 ---
-layout: slide
 section: 'Argument Dependent Lookup'
 slide: 'nlohmann::json'
 ---
@@ -117,7 +112,6 @@ json j = {
 </div>
 
 ---
-layout: slide
 section: 'Argument Dependent Lookup'
 slide: 'nlohmann::json'
 ---
@@ -136,7 +130,6 @@ struct adl_serializer {
 ```
 
 ---
-layout: slide
 section: 'Argument Dependent Lookup'
 slide: 'nlohmann::json'
 ---
@@ -154,7 +147,6 @@ NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Date, year, month, day)
 ```
 
 ---
-layout: slide
 section: 'Argument Dependent Lookup'
 slide: 'Specializing for User-defined Types'
 ---
@@ -170,7 +162,6 @@ struct Date {
 ```
 
 ---
-layout: slide
 section: 'Argument Dependent Lookup'
 slide: 'Specializing for User-defined Types'
 ---

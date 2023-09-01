@@ -1,5 +1,4 @@
 ---
-layout: slide
 slide: Agenda
 ---
 
@@ -11,7 +10,6 @@ slide: Agenda
 - Static Reflection
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Function Overloading'
 ---
@@ -31,7 +29,6 @@ void check(const std::string& key, const string_t& value);
 </div>
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Callback Functions'
 ---
@@ -51,7 +48,6 @@ check("some-date", [&date]() {
 </div>
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Polymorphism'
 ---
@@ -70,7 +66,6 @@ struct Date : public Serializable {
 </div>
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'com.google.gson'
 ---
@@ -90,7 +85,6 @@ private class MyDateSerializer implements
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'com.google.gson'
 ---
@@ -107,7 +101,6 @@ final Gson gson = new GsonBuilder()
 Runtime resolution is slow and inefficient. We can do much better in C++.
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Simple Example'
 ---
@@ -125,7 +118,6 @@ struct Date {
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'std::ostream'
 ---
@@ -145,7 +137,6 @@ std::ostream &operator <<(std::ostream &o, const Date &date) {
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'QDataStream'
 ---
@@ -164,7 +155,6 @@ QDataStream& operator>>(QDataStream&, Data&);
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'boost::serialization'
 ---
@@ -186,7 +176,6 @@ void serialize(Archive& archive, Date& date, const unsigned int version)
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'boost::serialization'
 ---
@@ -208,7 +197,6 @@ private:
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'std::format'
 ---
@@ -228,7 +216,6 @@ struct std::formatter<Date> : std::formatter<std::string> {
 </div>
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Function Template Specialization'
 ---
@@ -248,7 +235,6 @@ void print(const Date& date) {
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Function Template Specialization'
 ---
@@ -264,7 +250,6 @@ void print(const Date& date) {
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Class Template Specialization'
 ---
@@ -286,7 +271,6 @@ struct printer<Date> {
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'std::hash'
 ---
@@ -301,7 +285,6 @@ struct std::hash<Date> {
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Partial Template Specialization'
 ---
@@ -323,7 +306,6 @@ struct printer<T, Date> {
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'std::enable_if'
 ---
@@ -337,7 +319,6 @@ struct enable_if<true, T> { typedef T type; };
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Substitution Failure is not an Error'
 ---
@@ -356,7 +337,6 @@ struct printer<T,
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Helper Types'
 ---
@@ -372,7 +352,6 @@ constexpr bool is_same_v = is_same<T, U>::value;
 ```
 
 ---
-layout: slide
 section: 'The Basics'
 slide: 'Leveraging Helper Types'
 ---

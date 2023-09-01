@@ -1,25 +1,35 @@
 ---
+# https://sli.dev/custom/#frontmatter-configures
 theme: seriph
-class: ''
-highlighter: prism
-lineNumbers: false
+title: 'CppCon 2021 - Pejman Ghorbanzade'
 info:
   Building an Extensible Type Serialization System using Partial Template
   Specialization
-drawings:
-  persist: false
-presenter: 'dev'
+author: Pejman Ghorbanzade
+keywords: cppcon
+presenter: true
 download: 'https://touca.io/talks/cppcon21/slides-cppcon21-pejman.pdf'
+exportFilename: 'dist/slides-cppcon21-pejman.pdf'
 export:
   format: pdf
   timeout: 30000
   dark: false
-exportFilename: 'dist/slides-cppcon21-pejman.pdf'
-layout: image
-image: ./images/cppcon-cover.png
-title: 'CppCon 2021 - Pejman Ghorbanzade'
+highlighter: prism
+lineNumbers: false
+favicon: 'favicon.png'
 fonts:
   sans: 'Lato'
+defaults:
+  layout: 'slide'
+drawings:
+  persist: false
+htmlAttrs:
+  dir: 'ltr'
+  lang: 'en'
+# first style
+class: ''
+layout: image
+image: ./images/cppcon-cover.png
 ---
 
 ---
