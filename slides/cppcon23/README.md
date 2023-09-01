@@ -1,6 +1,6 @@
 # CppCon 2023
 
-![CppCon2023](./images/230827-cppcon.png)
+![CppCon2023](./images/cppcon-cover.png)
 
 ## Continuous Regression Testing for Faster and Safer Refactoring
 
