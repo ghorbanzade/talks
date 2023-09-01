@@ -8,7 +8,13 @@ info:
   Specialization
 drawings:
   persist: false
+presenter: 'dev'
 download: 'https://touca.io/talks/cppcon21/slides-cppcon21-pejman.pdf'
+export:
+  format: pdf
+  timeout: 30000
+  dark: false
+exportFilename: 'dist/slides-cppcon21-pejman.pdf'
 layout: image
 image: ./images/cppcon-cover.png
 title: 'CppCon 2021 - Pejman Ghorbanzade'
