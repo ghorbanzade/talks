@@ -16,7 +16,7 @@
           target="_blank"
           title="Aurora Innovation"
         >
-          Aurora Innovation &copy; 2023
+          Aurora Innovation
         </a>
       </div>
     </div>

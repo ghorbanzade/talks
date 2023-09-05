@@ -29,4 +29,11 @@ html.dark {
       @apply list-disc text-xl;
     }
   }
+  a {
+    @apply border-none;
+  }
+}
+
+.slidev-vclick-target {
+  transition: all 1s ease;
 }
