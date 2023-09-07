@@ -228,7 +228,7 @@ slide: About Me
 At Aurora, I am part of our Technology Foundations team, building tooling and
 infrastructure to improve developer experience and productivity.
 While most of core technology is written in C++, we have a variety of web
-applications for visualization, simulation, logistics management, and other
+applications for visualization, simulation, logistics management, and many other
 purposes. My team and I help accelerate the development of those applications
 by maintaining core libraries and improving shared components such as our build
 system toolchain.
@@ -237,12 +237,141 @@ click
 
 I have 8 years of experience in building and maintaining mission-critical
 software systems. I started my career at a cyber-security company acquired
-by VMware, then moved to Canon where I worked on a software for 3D visualization
-of medical images such as CT and MRI datasets.
+by VMware, then moved to Canon to build medical imaging software for four
+years.
 
 A part of my talk today showcases the software that I originally built for my
 team at Canon, and then sold to other companies when I got the IP rights and
-started a startup. In many ways, what I am sharing today covers the story of an
-adventure I've pursued with passion for the past five years. So I've decided to
-present it just like that: by telling you a story.
+started a startup. What I am sharing today is the story of this adventure
+that I've pursued with passion for the past five years.
 -->
+
+---
+slide: What we do matters
+---
+
+<div class="grid grid-cols-5 gap-4">
+  <div class="col-span-3 grid place-content-center space-y-4 w-4/5">
+    <p>Low-dose Ultra Helical CT Angiogram of the Carotids and Circle of Willis
+    for stroke work-up.</p>
+    <p>Clear visualization of contrast enhanced vessels and surrounding soft
+    tissue enables fast and confident rule-out of occlusion.</p>
+  </div>
+  <div class="col-span-2">
+    <img class="rounded-lg" src="/images/canon-carotid-angiography.jpg" />
+    <div class="text-right">
+      <a class="text-xs text-sky-500" href="https://global.medical.canon/products/computed-tomography/aq_one_prism_cg_headneck" target="_blank" rel="noreferrer">Courtesy of Canon Medical Group</a>
+    </div>
+  </div>
+</div>
+
+<!--
+At Canon, I was part of Canon Medical Informatics, building a software for
+3D visualization of medical images such as CT and MRI datasets.
+
+The image you see on the screen is a sample output of that software, showing
+a CT Carotids Angiogram dataset taken as part of the stroke work-up process
+to find potential occlusions in head and neck blood vessels.
+
+Now I don't have any medical background but I loved working at Canon and on
+this software. We had this sign in our lobby that read "What we do matters".
+And it was true. We were literally saving lives. And I was fortunate to be
+part of a small team of highly accomplished software engineers in charge of
+improving the quality of our overall codebase, maintaining our core libraries
+and the lower-level components of our software such as our data ingestion
+pipeline.
+
+This was challenging work. Because medical imaging datasets are a set 2D images
+taken at different points of space and time. It takes significant engineering
+work to construct the 3D object you see here that the user can interact
+with.
+-->
+
+---
+slide: Digital Imaging and Communications in Medicine
+---
+
+<div class="grid grid-cols-5 gap-4">
+  <div class="col-span-3 grid place-content-center w-4/5">
+
+| Group | Element | Tag name                   |
+|------:|:-------:|----------------------------|
+|  0008 | 0020    | Study date                 |
+|  0008 | 002A    | Acquisition DateTime       |
+|  0010 | 0010    | Patient's name             |
+|  0020 | 0013    | Instance Number            |
+|  0020 | 0020    | Patient orientation        |
+
+  </div>
+  <div class="col-span-2">
+    <img class="rounded-lg" src="/images/canon-2d-image.jpg" />
+    <div class="text-right">
+      <a class="text-xs text-sky-500" href="https://global.medical.canon/products/computed-tomography/aq_one_prism_cg_headneck" target="_blank" rel="noreferrer">Courtesy of Canon Medical Group</a>
+    </div>
+  </div>
+</div>
+
+
+<!--
+Now medical images are supposed to conform to a DICOM standard that specifies
+a non-proprietary image format that defines how to store and retrieve
+information in each 2D image. This information includes voxel data and
+other metadata (also known as tags) such as study date, image acquisition date,
+patient orientation and other patient information like name and date of birth.
+You can see five of these tags listed here.
+
+But this standard is very old and competes in complexity with the C++ standard.
+And because there is no enforcement mechanism, it is up to medical device
+manufacturers to decide how closely they follow the standard and what tags
+to populate. As a result, one may encounter real-world datasets in which
+required tags are missing or inconsistent across images. For a mission-critical
+medical software, this is a source of complexity and risk.
+-->
+
+---
+slide: What could go wrong?
+---
+
+<div class="grid grid-cols-5 gap-4">
+  <div class="col-span-3 grid place-content-center">
+    <span class="text-2xl">Incorrect interpolation and misrepresenting image
+    positions could result in inaccurate measurements, causing patient harm.</span>
+  </div>
+  <div class="col-span-2">
+    <video class="rounded-lg" autoplay loop muted>
+      <source src="/images/canon-carotid-angiography.mp4" type="video/mp4" />
+    </video>
+    <div class="text-right">
+      <a class="text-xs text-sky-500" href="https://global.medical.canon/products/computed-tomography/aq_one_prism_cg_headneck" target="_blank" rel="noreferrer">Courtesy of Canon Medical Group</a>
+    </div>
+  </div>
+</div>
+
+<!--
+To make things more difficult, our software needed to support medical datasets
+that were created decades ago, when the standard was different, manufacturers
+were even less compliant to the standard, and the physical hardware used for
+taking images were more primitive.
+
+In contrast to modern imaging devices that take thousands of a high-quality
+images with sub-millimeter precision, older machines could take as few as a
+hundred sparse images and their robotic arm moved with invariable speed,
+resulting in non-equidistant 2D images.
+
+A medical software designed for use by surgeons and clinicians cannot afford
+dismissing these subtle issues as they may lead to measurement discrepancies
+that could be life-threatening.
+-->
+
+---
+slide: Everything could go wrong
+---
+
+<div class="space-y-12">
+  <div class="text-2xl px-16">
+    <quote>The inherent complexity of the real world and the continuous change of requirements result in large and complex software systems that are costly and difficult to maintain.</quote>
+  </div>
+  <div class="italic text-center">
+    <quote>"In a sufficiently long time horizon, all possible behaviors of your system will occur."</quote><span class="text-sm"> - Hyrum's law (modified)</span>
+  </div>
+</div>
