@@ -5,5 +5,8 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export"
+  },
+  "devDependencies": {
+    "@iconify-json/heroicons": "^1.1.12"
   }
 }

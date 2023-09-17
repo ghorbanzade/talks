@@ -56,7 +56,17 @@ My name is Pejman and I am going to talk about your favorite subject: Refactorin
 
 ---
 src: ./pages/01_intro.md
-sectionDefault: Intro
+sectionDefault: ''
+---
+
+---
+src: ./pages/02_demo.md
+sectionDefault: Live Demo
+---
+
+---
+src: ./pages/03_tooling.md
+sectionDefault: ''
 ---
 
 ---

@@ -14,6 +14,15 @@ html.dark {
 .wsl-highlight {
   @apply text-sky-600 font-bold dark:text-yellow-500 dark:font-normal;
 }
+.wsl-card {
+  @apply light:bg-opacity-5 dark:bg-opacity-5 light:bg-sky-800 dark:bg-white rounded-lg p-4;
+}
+.wsl-text-primary {
+  @apply light:text-black dark:text-white font-medium;
+}
+.wsl-text-secondary {
+  @apply light:text-gray-500 dark:text-gray-00 font-thin;
+}
 
 #slide-content {
   @apply dark:bg-gradient-to-bl dark:from-[#0d0d2b] dark:to-[#074b7a];

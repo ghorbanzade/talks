@@ -174,13 +174,17 @@ please don't hesitate to let me know.
 slide: About Aurora
 ---
 
-<img src="/images/aurora-truck.jpg" class="rounded-l-[3rem] absolute bottom-7vh right-0 w-3/5" />
-<div class="min-h-[20vh] w-1/3 grid place-content-center space-y-8">
-  <div class="text-2xl font-medium">
-    Delivering the benefits of self-driving technology, safely, quickly, and broadly.
+<div class="grid grid-cols-3 gap-8">
+  <div class="grid place-content-center space-y-8">
+    <div class="text-xl font-medium">
+      Delivering the benefits of self-driving technology, safely, quickly, and broadly.
+    </div>
+    <div class="text-right wsl-highlight font-mono">
+      <a href="https://aurora.tech/careers">aurora.tech/careers</a>
+    </div>
   </div>
-  <div class="text-right wsl-highlight font-mono">
-    <a href="https://aurora.tech/careers">aurora.tech/careers</a>
+  <div class="col-span-2">
+    <img src="/images/aurora-truck.jpg" class="rounded-[3rem]" />
   </div>
 </div>
 
@@ -353,7 +357,7 @@ that were created decades ago, when the standard was different, manufacturers
 were even less compliant to the standard, and the physical hardware used for
 taking images were more primitive.
 
-In contrast to modern imaging devices that take thousands of a high-quality
+In contrast to modern imaging devices that take thousands of high-quality
 images with sub-millimeter precision, older machines could take as few as a
 hundred sparse images and their robotic arm moved with invariable speed,
 resulting in non-equidistant 2D images.
@@ -369,9 +373,494 @@ slide: Everything could go wrong
 
 <div class="space-y-12">
   <div class="text-2xl px-16">
-    <quote>The inherent complexity of the real world and the continuous change of requirements result in large and complex software systems that are costly and difficult to maintain.</quote>
+    <quote>The inherent complexity of the real world and the continuous change
+    of requirements result in large and complex software systems that are
+    costly and difficult to maintain.</quote>
   </div>
-  <div class="italic text-center">
-    <quote>"In a sufficiently long time horizon, all possible behaviors of your system will occur."</quote><span class="text-sm"> - Hyrum's law (modified)</span>
+  <div v-click class="italic text-center">
+    <quote>In a sufficiently long time horizon, all possible behaviors of your system will occur.</quote><span class="text-sm"> - Hyrum's law (modified)</span>
+  </div>
+</div>
+
+<!--
+So why am I sharing all this? I'm sharing to remind you:
+
+1. that the Real world is messy, complicated and ever-changing.
+2. that Real world problems impose ever-changing constraints.
+3. and Real world software are expected to meet those constraints.
+4. which is why they are large and complex.
+5. and like any large and complex system, real world software are difficult
+   to maintain.
+
+(click)
+
+This is because any changes to the system runs the risk of breaking it
+in ways that we do not expect. The interdependencies between system
+components and implicit assumptions made by each component are just too many
+to keep track of. This is why when building real-world software,
+it is often good practice to validate our assumptions and instead of dismissing
+edge cases as unlikely, we embrace this mindset that "in a sufficiently
+long time horizon, anything that could go wrong, will go wrong".
+-->
+
+---
+slide: Testing as risk mitigation
+---
+
+<div class="space-y-4">
+  <div class="w-2/3 wsl-card flex items-center space-x-4">
+    <div><heroicons-question-mark-circle class="text-gray-300 text-xl" /></div>
+    <div>If every code change can break our software, how could we stay productive
+  and safely introduce frequent changes?</div>
+  </div>
+  <div v-click class="ml-12 w-3/4 wsl-card flex items-center space-x-4">
+    <div><heroicons-light-bulb class="text-gray-300 text-xl" /></div>
+    <div>Implement high-level tests and continuously run them at scale to cover real-world system behaviors with reasonable degree of confidence.</div>
+  </div>
+</div>
+
+<!--
+Defensive programming is a reasonable software development methodology.
+But validating every assumption is just not practical. So if we truly believe
+that every code change can break our software, how could we stay productive
+and find the courage and confidence to make frequent changes?
+
+(click)
+
+It's by establishing a mechanism to receive fast and reliable feedback
+on the impact of each code change. In practice, this means implementing
+multiple tiers of testing, from unit tests and component tests to higher-level
+system tests, and scaling those tests to be exhaustive enough to yield a high
+degree of confidence in the overall behavior of the system.
+-->
+
+---
+slide: Developer inner and outer loops
+---
+
+<div class="grid grid-cols-2 gap-6">
+  <div class="grid place-content-center text-xl space-y-12">
+    <div class="leading-7">
+      Fast feedback cycles boost development confidence and productivity.
+    </div>
+    <div class="leading-7">
+      Moving high-level tests out of the developer loop results in slow
+      and inefficient application life-cycles.
+    </div>
+  </div>
+  <LightOrDark>
+    <template #dark>
+      <img src="/images/sdlc-dark.svg" class="rounded-lg" />
+    </template>
+    <template #light>
+      <img src="/images/sdlc-light.svg" class="rounded-lg" />
+    </template>
+  </LightOrDark>
+</div>
+
+<!--
+Most organizations attempt to implement this mechanism to a varying extent
+and degree of success. For example, they run unit tests and integration tests
+as part of the CI. But in most cases, higher-level system tests that provide
+more confidence are pushed to the testing phase of the software development
+life-cycle; the outer loop in the diagram you see here. This outer loop
+describes the SDLC at the organization level and each of its cycles is an
+iteration to the business product, such as a new version increment.
+
+But there is a separate loop at the developer level whose each cycle represents
+an iteration to the codebase, such as a change landing as a PR.
+This inner loop is incredibly important to the productivity of engineers and
+is expected to be well in sync with the outer loop, like cogs in a mechanical
+watch. But our decision as an industry to exclude higher-level system tests
+from the inner loop makes this synchronization uncommon.
+-->
+
+---
+slide: The myth of the testing pyramid
+---
+
+<div class="grid grid-cols-2 gap-16">
+  <div class="grid">
+    <table class="table-fixed">
+      <thead>
+        <tr>
+          <th scope="col"><span class="font-bold">Concerns</span></th>
+          <th scope="col"><span class="font-bold">Benefits</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="space-y-1">
+            <div class="wsl-text-primary">Difficult</div>
+            <div class="wsl-text-secondary text-xs">costly to setup and run</div>
+          </td>
+          <td class="space-y-1">
+            <div class="wsl-text-primary">Expressive</div>
+            <div class="wsl-text-secondary text-xs">easy to read and modify</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="space-y-1">
+            <div class="wsl-text-primary">Expensive</div>
+            <div class="wsl-text-secondary text-xs">need system deployment</div>
+          </td>
+          <td class="space-y-1">
+            <div class="wsl-text-primary">Scalable</div>
+            <div class="wsl-text-secondary text-xs">can run many test cases</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="wsl-text-primary">Slow</div>
+            <div class="wsl-text-secondary text-xs">take long to execute</div>
+          </td>
+          <td>
+            <div class="wsl-text-primary">Comprehensive</div>
+            <div class="wsl-text-secondary text-xs">cover component interactions</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="wsl-text-primary">Brittle</div>
+            <div class="wsl-text-secondary text-xs">flaky and easy to break</div>
+          </td>
+          <td>
+            <div class="wsl-text-primary">Reassuring</div>
+            <div class="wsl-text-secondary text-xs">provide more confidence</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="space-y-4">
+    <img class="rounded-lg mx-auto px-16" src="/images/testing-trophy.png" />
+    <div class="text-xs rounded-lg bg-opacity-5 bg-white p-4 text-center">
+      <span>"Write tests. Not too many. Mostly integration."</span><span> - <a class="text-sky-500" href="https://kentcdodds.com/blog/write-tests" target="_blank" rel="noreferrer">Guillermo Rauch</a></span>
+    </div>
+  </div>
+</div>
+
+---
+slide: Continuous regression testing
+---
+
+<div class="space-y-4">
+  <div class="wsl-card">
+  Continuously verifying that the software works as well as before, during the development stage.
+  </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div class="wsl-card space-y-2">
+      <div class="flex items-center space-x-2">
+        <div><heroicons-check-circle class="text-gray-300 text-lg" /></div>
+        <div>Testing for Correctness</div>
+      </div>
+      <div class="text-sm">
+        <li>Requires describing the expected behavior for each test input.</li>
+        <li>Mismatches against the expected values indicate failure.</li>
+        <li>Tests are difficult to maintain, scale, and automate.</li>
+      </div>
+    </div>
+    <div class="wsl-card space-y-2">
+      <div class="flex items-center space-x-2">
+        <div><heroicons-magnifying-glass-circle class="text-gray-300 text-lg" /></div>
+        <div>Testing for Regression</div>
+      </div>
+      <div class="text-sm">
+        <li>Treats a released version of software as baseline.</li>
+        <li>Mismatches against the baseline require justification.</li>
+        <li>Tests are expressive and decoupled from the test input.</li>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+slide: Higher-level tests in practice
+---
+
+<div class="grid grid-cols-2 gap-12">
+  <div class="space-y-8 grid place-content-center">
+    <div>Safely rewriting a critical data ingestion pipeline</div>
+    <div class="grid grid-cols-2 gap-2">
+      <div class="wsl-card">
+        <div class="wsl-text-primary text-2xl">500,000<span>&thinsp;+</span></div>
+        <div class="wsl-text-secondary text-xs">lines of code</div>
+      </div>
+      <div class="wsl-card">
+        <div class="wsl-text-primary text-2xl">16,000<span>&thinsp;+</span></div>
+        <div class="wsl-text-secondary text-xs">real-world datasets</div>
+      </div>
+      <div class="wsl-card">
+        <div class="wsl-text-primary text-2xl">10,000<span>&thinsp;+</span></div>
+        <div class="wsl-text-secondary text-xs">attributes to verify</div>
+      </div>
+      <div class="wsl-card">
+        <div class="wsl-text-primary text-2xl">4,000<span>&thinsp;+</span></div>
+        <div class="wsl-text-secondary text-xs">gigabytes of input data</div>
+      </div>
+    </div>
+  </div>
+  <div class="grid place-content-center">
+    <LightOrDark>
+      <template #dark>
+        <img src="/images/data-ingestion-pipeline.dark.svg" class="rounded-lg" />
+      </template>
+      <template #light>
+        <img src="/images/data-ingestion-pipeline.light.svg" class="rounded-lg" />
+      </template>
+    </LightOrDark>
+  </div>
+</div>
+
+---
+slide: In-Memory Comparison
+---
+
+<div class="grid grid-cols-2 gap-6">
+  <div class="space-y-6 px-12">
+    <ul>
+      <li>Test is difficult to setup</li>
+      <li>Test system is inefficient to run</li>
+      <li>Test system is not reuseable</li>
+    </ul>
+    <div class="grid grid-cols-2 gap-2">
+      <div class="wsl-card">
+        <div class="wsl-text-primary text-2xl">50,000<span>&thinsp;+</span></div>
+        <div class="wsl-text-secondary text-xs">LoC test framework</div>
+      </div>
+      <div class="wsl-card">
+        <div class="wsl-text-primary text-2xl">16<span>&thinsp;+</span></div>
+        <div class="wsl-text-secondary text-xs">hours to run test</div>
+      </div>
+    </div>
+  </div>
+  <div>
+
+```cpp
+for (auto test_case: test_suite) {
+ auto new_output = new_system(test_case);
+ auto old_output = old_system(test_case);
+ auto report = compare(new_output, old_output);
+ report.store(test_case);
+}
+generate_summary_report();
+```
+
+  </div>
+</div>
+
+---
+slide: Snapshot Testing
+---
+
+<div class="grid grid-cols-2 gap-6">
+  <div class="space-y-6 grid place-content-center">
+    <div class="grid grid-cols-2 gap-2">
+      <div class="wsl-card space-y-1">
+        <div class="wsl-text-primary">Debugging</div>
+        <div class="wsl-text-secondary text-xs">System is treated as a black box. Output may miss important data.</div>
+      </div>
+      <div class="wsl-card space-y-1">
+        <div class="wsl-text-primary">Reliability</div>
+        <div class="wsl-text-secondary text-xs">Output may include nondeterministic data.</div>
+      </div>
+      <div class="wsl-card space-y-1">
+        <div class="wsl-text-primary">Data Management</div>
+        <div class="wsl-text-secondary text-xs">Output is stored in version control along with source code.</div>
+      </div>
+      <div class="wsl-card space-y-1">
+        <div class="wsl-text-primary">Reporting</div>
+        <div class="wsl-text-secondary text-xs">Differences are difficult to inspect, understand, and manage.</div>
+      </div>
+    </div>
+  </div>
+  <div>
+
+```cpp
+for (auto test_case: test_suite) {
+ auto new_output = new_system(test_case);
+ store_snapshot(test_case, new_output);
+ auto old_output = load_snapshot(test_case);
+ auto report = compare(new_output, old_output);
+ report.store(test_case);
+}
+generate_summary_report();
+```
+
+  </div>
+</div>
+
+---
+slide: "Problem: Debugging"
+---
+
+<div class="grid gap-8">
+  <LightOrDark>
+    <template #dark>
+      <img src="/images/debugging-black-box-dark.svg" class="w-3/4 mx-auto"/>
+    </template>
+    <template #light>
+      <img src="/images/debugging-black-box-light.svg" class="w-3/4 mx-auto"/>
+    </template>
+  </LightOrDark>
+  <div class="grid w-3/4 mx-auto">
+    <div class="wsl-card text-center text-sm">Good tests point to the root cause when they fail.</div>
+  </div>
+</div>
+
+---
+slide: "Problem: Reliability"
+---
+
+<div class="grid grid-cols-2 gap-6">
+  <div class="grid place-content-center space-y-12">
+    <ul>
+      <li class="text-base">are prone to capturing non-deterministic data.</li>
+      <li class="text-base">are prone to capturing unimportant data.</li>
+      <li class="text-base">may leave out changes not captured in the output.</li>
+      <li class="text-base">fail to compare captured data in their original type.</li>
+    </ul>
+    <div class="wsl-card text-center text-sm">Good tests pass and fail only when they are supposed to.</div>
+  </div>
+  <div>
+
+```plaintext
+          The Alameda ALM 408-207-1126
+                777 The Alameda
+              San Jose, CA 95126
+  CANTALOUPE                       $3.99 F
+    *Sale*            $3.32       -$0.67
+    Prime Extra 10.00%            -$0.33
+            Subtotal:              $3.99
+            Total Savings:        -$1.00
+            Net Sales:             $2.99
+                Total:             $2.99
+                Sold Items:            1
+
+********************************************
+
+      901 61797 09/15/2023 05:46 PM
+```
+
+  </div>
+</div>
+
+---
+slide: "Problem: Data Management"
+---
+
+<div class="grid gap-4">
+   <div class="grid place-content-center w-3/4 mx-auto">
+    <LightOrDark>
+      <template #dark>
+        <img src="/images/data-management-dark.svg" class="rounded-lg" />
+      </template>
+      <template #light>
+        <img src="/images/data-management-light.svg" class="rounded-lg" />
+      </template>
+    </LightOrDark>
+  </div>
+  <div class="grid w-3/4 mx-auto">
+    <div class="wsl-card text-center text-sm">Good test systems enable auditing how software evolves.</div>
+  </div>
+</div>
+
+---
+slide: "Problem: Reporting"
+---
+
+<div class="grid gap-4">
+  <div class="grid place-content-center w-3/4 mx-auto">
+    <LightOrDark>
+      <template #dark>
+        <img src="/images/reporting-dark.svg" class="rounded-lg" />
+      </template>
+      <template #light>
+        <img src="/images/reporting-light.svg" class="rounded-lg" />
+      </template>
+    </LightOrDark>
+  </div>
+  <div class="grid w-3/4 mx-auto">
+    <div class="wsl-card text-center text-sm">Good test systems report insights as output, not raw test results .</div>
+  </div>
+</div>
+
+---
+slide: Design Principles
+---
+
+<div class="grid grid-cols-3 gap-2">
+  <div class="wsl-card space-y-2">
+    <div class="flex space-x-2 items-center">
+      <div><heroicons-command-line class="text-gray-300" /></div>
+      <div class="wsl-text-primary text-xl font-bold">Developer Friendly</div>
+    </div>
+    <div class="wsl-text-secondary text-sm">
+      Designed for everyday use by developers.
+      Should enable creating tests that are cheap to write, fast to run,
+      and easy to modify.
+    </div>
+  </div>
+  <div class="wsl-card space-y-2">
+    <div class="flex space-x-2 items-center">
+      <div><heroicons-puzzle-piece class="text-gray-300" /></div>
+      <div class="wsl-text-primary text-xl font-bold">Flexible</div>
+    </div>
+    <div class="wsl-text-secondary text-sm">
+      Designed for capturing values of variables and runtime of functions.
+      Should handle data points with primitive or user-defined data types.
+    </div>
+  </div>
+  <div class="wsl-card space-y-2">
+    <div class="flex space-x-2 items-center">
+      <div><heroicons-rocket-launch class="text-gray-300" /></div>
+      <div class="wsl-text-primary text-xl font-bold">Scalable</div>
+    </div>
+    <div class="wsl-text-secondary text-sm">
+      Designed for testing mission-critical software.
+      Should handle capturing large number of test cases and report test results
+      as actionable insights.
+    </div>
+  </div>
+</div>
+
+---
+slide: Rethinking snapshot testing
+---
+
+<div class="grid place-content-center">
+  <LightOrDark>
+    <template #dark>
+      <img src="/images/snapshot-testing-md-dark.svg" class="rounded-lg" />
+    </template>
+    <template #light>
+      <img src="/images/snapshot-testing-md-light.svg" class="rounded-lg" />
+    </template>
+  </LightOrDark>
+</div>
+
+---
+slide: About Touca
+---
+
+<div class="grid grid-cols-3 gap-2">
+  <div class="flex flex-col justify-between bg-[#074b7a] p-4 rounded-2xl dark:bg-transparent dark:rounded-none">
+    <div class="space-y-2">
+      <div><img src="/images/logo-touca.svg" class="h-[2.5rem]" /></div>
+      <div class="text-white">Find the unintended side-effects of your day-to-day code changes</div>
+    </div>
+    <div class="space-y-4">
+      <div class="space-y-2">
+        <div class="text-sm text-white">Trusted By:</div>
+        <img src="/images/logo-canon.svg" class="h-[1rem]" />
+      </div>
+      <div class="space-y-2">
+        <div class="text-sm text-white">Backed By:</div>
+        <img src="/images/logo-techstars.svg" class="h-[1.5rem]" />
+      </div>
+    </div>
+  </div>
+  <div class="col-span-2">
+    <img src="/images/touca-techstars.jpg" class="rounded-2xl" />
   </div>
 </div>
