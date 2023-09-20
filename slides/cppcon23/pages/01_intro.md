@@ -714,12 +714,15 @@ slide: "Problem: Reliability"
 
 <div class="grid grid-cols-2 gap-6">
   <div class="grid place-content-center space-y-12">
-    <ul>
-      <li class="text-base">are prone to capturing non-deterministic data.</li>
-      <li class="text-base">are prone to capturing unimportant data.</li>
-      <li class="text-base">may leave out changes not captured in the output.</li>
-      <li class="text-base">fail to compare captured data in their original type.</li>
-    </ul>
+    <div class="space-y-2">
+      <div>Snapshot tests</div>
+      <ul>
+        <li class="text-base">are prone to capturing non-deterministic data.</li>
+        <li class="text-base">are prone to capturing unimportant data.</li>
+        <li class="text-base">may leave out changes not captured in the output.</li>
+        <li class="text-base">fail to compare captured data in their original type.</li>
+      </ul>
+    </div>
     <div class="wsl-card text-center text-sm">Good tests pass and fail only when they are supposed to.</div>
   </div>
   <div>
@@ -818,8 +821,8 @@ slide: Design Principles
     </div>
     <div class="wsl-text-secondary text-sm">
       Designed for testing mission-critical software.
-      Should handle capturing large number of test cases and report test results
-      as actionable insights.
+      Should handle capturing data from large number of test cases and report
+      test results as actionable insights.
     </div>
   </div>
 </div>
@@ -847,7 +850,9 @@ slide: About Touca
   <div class="flex flex-col justify-between bg-[#074b7a] p-4 rounded-2xl dark:bg-transparent dark:rounded-none">
     <div class="space-y-2">
       <div><img src="/images/logo-touca.svg" class="h-[2.5rem]" /></div>
-      <div class="text-white">Find the unintended side-effects of your day-to-day code changes</div>
+      <div class="text-white">
+        Find the unintended side-effects of your day-to-day code changes
+      </div>
     </div>
     <div class="space-y-4">
       <div class="space-y-2">
