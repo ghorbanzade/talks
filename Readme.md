@@ -33,7 +33,7 @@ Continuous Regression Testing for Safer and Faster Refactoring
 
 - [Registration Link](https://cppcon2023.sched.com/event/1Qtgx/continuous-regression-testing-for-safer-and-faster-refactoring)
 
-![CppCon2023](./slides/cppcon23/images/230827-cppcon.png)
+![CppCon2023](./slides/cppcon23/images/cppcon-cover.png)
 
 ## Previous Talks
 
