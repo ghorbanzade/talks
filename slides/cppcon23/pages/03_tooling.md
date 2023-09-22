@@ -6,32 +6,40 @@ section: ''
 <Agenda section="tooling" />
 
 ---
-slide: Installing Touca
+slide: System Architecture
+---
+
+<div class="grid place-content-center w-3/4 mx-auto">
+  <LightOrDark>
+    <template #dark>
+      <img src="/images/system-architecture-sm-dark.svg" />
+    </template>
+    <template #light>
+      <img src="/images/system-architecture-sm-light.svg" />
+    </template>
+  </LightOrDark>
+</div>
+
+---
+slide: Self-hosting
 ---
 
 <div class="grid grid-cols-3 gap-6">
-  <div class="grid place-content-center space-y-4">
-    <!-- <div>
-      Gain insights and analytics about how your software is evolving over time.
-      Subscribe to any suite to get notified about regressions in any version.
+  <div class="grid place-content-around space-y-4">
+    <div class="flex items-center justify-center space-x-1">
+      <div class="text-xl">github.com</div>
+      <div>/</div>
+      <div class="text-2xl font-bold">trytouca</div>
     </div>
-    <div class="flex space-x-2">
-      <div class="wsl-card"><heroicons-light-bulb class="text-2xl" /></div>
-      <div class="wsl-card"><heroicons-presentation-chart-line class="text-2xl" /></div>
-    </div> -->
-    <div>
-      <div><img class="wsl-card h-[3rem]" src="/images/icon-github.svg" /></div>
-      <div class="font-mono text-sm p-4">
-        github.com/trytouca/trytouca
-      </div>
-    </div>
-    <div class="grid grid-cols-3 gap-2">
-      <div class="font-mono text-sm wsl-card p-4 col-span-3">
+    <div class="grid">
+      <div class="font-mono wsl-card p-4">
         $ brew install touca<br />
         $ touca server install
       </div>
-      <div><img class="wsl-card" src="/images/icon-kubernetes.svg" /></div>
-      <div><img class="wsl-card" src="/images/icon-docker.svg" /></div>
+    </div>
+    <div class="flex items-center space-x-2 justify-center">
+      <div><heroicons-check-badge class="text-green-500" /></div>
+      <div>Apache 2.0 License</div>
     </div>
   </div>
   <div class="col-span-2 grid place-content-center">
@@ -46,19 +54,34 @@ slide: Installing Touca
   </div>
 </div>
 
-
-
 ---
-slide: System Architecture
+slide: C++ SDK
 ---
 
-<div class="grid place-content-center w-3/4 mx-auto">
-  <LightOrDark>
-    <template #dark>
-      <img src="/images/system-architecture-sm-dark.svg" />
-    </template>
-    <template #light>
-      <img src="/images/system-architecture-sm-light.svg" />
-    </template>
-  </LightOrDark>
+<div class="grid grid-cols-2 gap-12">
+  <div class="grid grid-cols-3 gap-2">
+    <div class="wsl-card grid place-content-center"><div>GCC</div><div class="text-xs text-center">9.4.0</div></div>
+    <div class="wsl-card grid place-content-center"><div>Clang</div><div class="text-xs text-center">11.0.0</div></div>
+    <div class="wsl-card grid place-content-center"><div>MSVC</div><div class="text-xs text-center">1900</div></div>
+    <div class="wsl-card grid place-content-center col-span-3">C++11 through C++20</div>
+    <div class="wsl-card grid place-content-center"><div>CMake</div><div class="text-xs text-center">3.14</div></div>
+    <div class="wsl-card grid place-content-center"><div>Conan</div><div class="text-xs text-center">v1</div></div>
+    <div class="wsl-card grid place-content-center"><div>Bazel</div><div class="text-xs text-center">v6.3.2</div></div>
+  </div>
+  <div class="grid place-content-center space-y-2">
+    <LightOrDark>
+      <template #dark>
+        <img src="/images/touca-sdk-install-dark.svg" class="rounded-xl" />
+      </template>
+      <template #light>
+        <img src="/images/touca-sdk-install-light.svg" class="rounded-xl" />
+      </template>
+    </LightOrDark>
+    <div class="text-right text-sm"><a href="https://touca.io/docs/sdk/installing" target="_blank" rel="noreferrer">https://touca.io/docs/sdk/installing</a></div>
+  </div>
 </div>
+
+---
+slide: Data Capturing
+---
+

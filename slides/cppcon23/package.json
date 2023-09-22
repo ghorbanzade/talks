@@ -8,5 +8,9 @@
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.1.12"
+  },
+  "dependencies": {
+    "@iconify-json/bi": "^1.1.20",
+    "@iconify-json/devicon": "^1.1.15"
   }
 }

@@ -66,7 +66,7 @@ sectionDefault: Live Demo
 
 ---
 src: ./pages/03_tooling.md
-sectionDefault: ''
+sectionDefault: Design
 ---
 
 ---
