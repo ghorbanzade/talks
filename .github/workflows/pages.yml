@@ -30,14 +30,19 @@ jobs:
           npm -w slides/cppcon23 install
       - name: Build slides
         working-directory: ./slides/cppcon23
-        run: npm run build -- --base /talks/
+        run: npm run build -- --base /talks/cppcon23
       - name: Export slides
         working-directory: ./slides/cppcon23
         run: npm run export
+      - name: Prepare final artifact
+        run: |
+          mkdir -p ./dist
+          mv ./slides/redirect.html ./dist/index.html
+          mv ./slides/cppcon23/dist ./dist/cppcon23
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./slides/cppcon23/dist
+          path: ./dist
 
   deploy:
     environment:
