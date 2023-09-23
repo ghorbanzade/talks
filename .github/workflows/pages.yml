@@ -32,7 +32,7 @@ jobs:
           npm -w slides/cppcon23 install
       - name: Build slides
         working-directory: ./slides/cppcon23
-        run: npm run build -- --base /talks/cppcon23/
+        run: npm run build -- --base /talks/
       - name: Export slides
         working-directory: ./slides/cppcon23
         run: npm run export
