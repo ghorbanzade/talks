@@ -2,7 +2,6 @@ html {
   --slidev-code-font-size: 0.9rem !important;
   --slidev-code-line-height: 1.3rem !important;
   --slidev-code-padding: 1.5rem 1rem !important;
-  --slidev-code-margin: 0.25rem 0 !important;
   --wsl-color-dark-100: hsl(200, 100%, 95%);
   --wsl-color-dark-200: #9ca3af;
   --wsl-color-dark-300: #ffffff;
@@ -10,6 +9,26 @@ html {
 }
 html.dark {
   --prism-background: #0d0d2b !important;
+}
+.wsl-code-text-sm {
+  --slidev-code-font-size: 0.8rem !important;
+  --slidev-code-line-height: 1.2rem !important;
+}
+.wsl-code-text-xs {
+  --slidev-code-font-size: 0.7rem !important;
+  --slidev-code-line-height: 0.9rem !important;
+}
+.wsl-code-p-sm {
+  --slidev-code-padding: 1rem 0.75rem !important;
+  --slidev-code-margin: 0 !important;
+}
+.wsl-code-h-full {
+  .slidev-code-wrapper {
+    @apply h-full;
+  }
+  .slidev-code {
+    @apply h-full m-0 grid content-center;
+  }
 }
 .wsl-highlight {
   @apply text-sky-600 font-bold dark:text-yellow-500 dark:font-normal;

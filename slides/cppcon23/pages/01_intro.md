@@ -1,4 +1,34 @@
 ---
+layout: cover
+background: null
+---
+
+<p class="text-left wsl-highlight w-4/5 mx-auto invisible">.</p>
+<div class="space-y-12">
+  <h1>Continuous Regression Testing<br /> for Safer and Faster Refactoring</h1>
+  <div class="justify-between items-center flex w-4/5 mx-auto">
+    <div class="w-50 bg-gradient-to-bl to-[#074b7a] from-[#0d0d2b] p-4 rounded-2xl dark:bg-none dark:rounded-none">
+      <img src="/images/cppcon-logo.png" />
+    </div>
+    <div class="w-1/2 text-right">
+      <div class="font-600 p-0 m-0 text-2xl">Pejman Ghorbanzade</div>
+      <div class="font-400 text-md wsl-highlight">Aurora Innovation</div>
+    </div>
+  </div>
+</div>
+
+<!--
+Good Afternoon, everyone!
+
+It is great to be back at CppCon!
+
+Thank you for choosing to spend your time here with me and
+I hope that you would find this talk worthwhile and insightful.
+
+My name is Pejman and I am going to talk about your favorite subject: Refactoring.
+-->
+
+---
 slide: ''
 section: ''
 ---
@@ -15,9 +45,8 @@ section: ''
 </div>
 
 <!--
-How do I know refactoring is your bread and butter? Because, according to a 2019
-report by Strip that surveyed more than 1,000 professional software engineers,
-we spend 17 hours of our working week maintaining existing software.
+How do I know refactoring is your bread and butter? Because, as software
+engineers, we spend 17 hours of our working week maintaining existing software.
 
 So for anyone who's been in this industry for a while, chances are that
 you either love maintaining software or are unhappy at least half the time.
@@ -27,19 +56,24 @@ you either love maintaining software or are unhappy at least half the time.
 slide: Maintaining Software
 ---
 
-<div class="space-y-4">
-  <div>
-    <ul>
+<div class="space-y-2">
+  <div class="grid grid-cols-3 gap-2 place-content-between">
+    <div class="col-span-1 text-base wsl-card grid content-center">
       <li>Reading</li>
-      <li>Debugging</li>
       <li>Refactoring</li>
+      <li>Upgrading</li>
+      <li>Migrating</li>
+      <li>Debugging</li>
       <li>Adding tests</li>
       <li>Writing documentation</li>
       <li>Resolving technical debt</li>
-    </ul>
+    </div>
+    <div class="col-span-2">
+      <img src="/images/japanese-garden.jpg" class="rounded-lg" />
+    </div>
   </div>
-  <div v-click class="italic text-center">
-    <quote>"The only constant in life is change."</quote><span class="text-sm"> - Heraclitus</span>
+  <div class="italic text-center">
+    <q>The only constant in life is change.</q><span class="text-sm"> - Heraclitus</span>
   </div>
 </div>
 
@@ -47,26 +81,23 @@ slide: Maintaining Software
 But what do we mean by maintaining software? We could define it based on
 all the activities that it involves. Or we can put our business hats on and
 define it as introducing changes to make way for new features and improvements.
-But I like to simplify it as reacting to the changes in the outside world.
 
+But I like to simplify it as reacting to the changes in the outside world.
 It could be that product requirements have changed, or our understanding of the
 what would meet those requirements, our preferred way of solving a given problem
 have changed. Either way, we change code to tend to our software, just like
 a gardener tends to its garden.
 
-click
-
-After all, software is much like a living organism. It is constantly evolving
-until it ceases to deliver value.
+After all, software is much like a living organism. It is constantly evolving.
 -->
 
 ---
 slide: Types of Change
 ---
 
-<div class="space-y-4">
-  <div>
-    <ul>
+<div class="space-y-8">
+  <div class="grid grid-cols-7 gap-2 place-content-between">
+    <div class="col-span-4 text-base wsl-card grid content-center">
       <li>Fixing a defect</li>
       <li>Enabling code reuse</li>
       <li>Adjusting to new expectations</li>
@@ -75,10 +106,13 @@ slide: Types of Change
       <li>Renaming a function or variable</li>
       <li>Changing system configuration</li>
       <li>Updating build system toolchain</li>
-    </ul>
+    </div>
+    <div class="col-span-3">
+      <img src="/images/indiana-bell.jpg" class="rounded-lg" />
+    </div>
   </div>
-  <div v-click class="italic text-center">
-    <quote>"Software engineering is programming integrated over time."</quote><span class="text-sm"> - Titus Winters</span>
+  <div class="italic text-center">
+    <q>Software engineering is programming integrated over time.</q><span class="text-sm"> - Titus Winters</span>
   </div>
 </div>
 
@@ -87,14 +121,15 @@ We change software for a variety of reasons: To make it work better, faster and
 more efficient. To make the code simpler, more readable, easier to understand
 and change in the future.
 
-We make these changes with good intentions. Some changes are easy and limited
-in scope, like improving a function implementation, and some are hard and may
-require large-scale refactoring, like supporting a new compiler. But regardless
-of their type, every change to our software runs the risk of breaking it.
+We make these changes with good intentions. Some changes are easy and
+limited in scope, like fixing a compiler warning. And some are difficult
+and may require large-scale refactoring and migration.
+Like this Indiana Bell building here on the screen that was
+rotated in 1930, without ceasing operations, to make room for a new city
+projects.
 
-click
-
-Managing this risk is the art that makes our craft interesting.
+But regardless of their type, every change to our software runs the risk of
+breaking it. Managing this risk is the art that makes our craft interesting.
 -->
 
 ---
@@ -119,13 +154,9 @@ Whether it's renaming a function or upgrading a third-party dependency, it is
 always possible for something to go wrong sometimes. To manage this risk,
 we need to gain confidence that our changes are safe. The time that it takes
 to get to this confidence directly determines our productivity and efficiency.
-The faster we get to confidence about a given code change, the sooner we can
-move on and make more follow-up changes.
 
-But despite our best efforts, we are far from having fast feedback cycles
-that provide sufficient confidence for every day code changes.
-On average, it takes engineering teams 23 days to get feedback on whether their
-code changes work as they expect.
+But despite our best efforts, it takes engineering teams 23 days to get
+feedback on whether their code changes work as they expect.
 
 The goal of this talk is to present Continuous Regression Testing as a method
 to help us address this problem and shorten this feedback cycle.
@@ -139,35 +170,19 @@ section: ''
 <Agenda section="intro" />
 
 <!--
-In the next hour, we are going to cover what Continuous Regression Testing is
-and how it is useful.
+In the next hour, we are going to cover what Continuous Regression Testing is,
+how a continuous regression testing looks like in practice, how to build one,
+and how to use it to identify all sorts of regressions including changes
+to build-time and runtime performance.
 
-Then we will have a live demo of a free and open source
-Continuous Regression testing system to understand how it can be used in
-practice and for real-world use cases.
-
-Then we will see how that system works and review some of its design decisions
-that could be helpful for building other similar systems.
-
-Next, we will cover how to use a regression testing tool effectively and how
-to navigate the common pitfalls that lead to slow and flaky high-level tests.
-
-Then we will have another series of live demos to see how Continuous Regression
-Testing can help us identify other types of regressions such as changes in
-performance, and output binary size.
-
-And lastly, I hope to convince you that no tool or method could serve as a
-silver bullet and efficiently building safe systems requires a culture of
-safety that combines a variety of tools and methods to mitigate the risks of
-everyday code changes.
+Then we're going to take a step back and think about what it takes to build
+high-quality software. And I hope to convince you that no tool or method could
+serve as a silver bullet; And building software efficiently requires a
+culture of safety that combines a variety of tools and methods to mitigate
+the risks of everyday code changes.
 
 As you can tell, we are going to cover a lot of content within the next hour.
 If you have any questions, please wait until the end to ask them.
-
-But there is one exception: I assume you already know a lot about software
-testing. So, to respect you and your time, I intend to skip over the basics and
-dive straight in. But if you felt I am going too fast and need me to elaborate,
-please don't hesitate to let me know.
 -->
 
 ---
@@ -211,10 +226,10 @@ slide: About Me
       <li>Staff Software Engineer at <span class="wsl-highlight">Aurora Innovation</span></li>
       <li>Building tooling to improve developer experience</li>
       <li>Accelerating the development of web applications</li>
-      <li v-click>8 years of professional experience</li>
-      <li v-after>Maintaining mission-critical software systems</li>
-      <li v-after>Ex VMware Carbon Black, <span>Canon Medical Informatics</span></li>
-      <li v-after>Former founder of a developer tools startup</li>
+      <li>8 years of professional experience</li>
+      <li>Maintaining mission-critical software systems</li>
+      <li>Ex VMware Carbon Black, <span>Canon Medical Informatics</span></li>
+      <li>Former founder of a developer tools startup</li>
     </ul>
   </div>
   <div class="col-span-3 space-y-2">
@@ -231,23 +246,15 @@ slide: About Me
 <!--
 At Aurora, I am part of our Technology Foundations team, building tooling and
 infrastructure to improve developer experience and productivity.
-While most of core technology is written in C++, we have a variety of web
-applications for visualization, simulation, logistics management, and many other
-purposes. My team and I help accelerate the development of those applications
-by maintaining core libraries and improving shared components such as our build
-system toolchain.
-
-click
+While most of our core technology is written in C++, my team and I help
+accelerate the development of our web applications by maintaining core
+libraries and improving shared components such as our build system toolchain.
 
 I have 8 years of experience in building and maintaining mission-critical
-software systems. I started my career at a cyber-security company acquired
-by VMware, then moved to Canon to build medical imaging software for four
-years.
-
-A part of my talk today showcases the software that I originally built for my
-team at Canon, and then sold to other companies when I got the IP rights and
-started a startup. What I am sharing today is the story of this adventure
-that I've pursued with passion for the past five years.
+software systems. I started my career in cyber-security, then moved to Canon
+to build software for 3D visualization of medical images like CT and MRI
+datasets. We had this sign in our lobby that read "What we do matters".
+And it was true. We were literally saving lives.
 -->
 
 ---
@@ -270,25 +277,14 @@ slide: What we do matters
 </div>
 
 <!--
-At Canon, I was part of Canon Medical Informatics, building a software for
-3D visualization of medical images such as CT and MRI datasets.
-
 The image you see on the screen is a sample output of that software, showing
 a CT Carotids Angiogram dataset taken as part of the stroke work-up process
 to find potential occlusions in head and neck blood vessels.
 
-Now I don't have any medical background but I loved working at Canon and on
-this software. We had this sign in our lobby that read "What we do matters".
-And it was true. We were literally saving lives. And I was fortunate to be
-part of a small team of highly accomplished software engineers in charge of
-improving the quality of our overall codebase, maintaining our core libraries
-and the lower-level components of our software such as our data ingestion
-pipeline.
-
-This was challenging work. Because medical imaging datasets are a set 2D images
-taken at different points of space and time. It takes significant engineering
-work to construct the 3D object you see here that the user can interact
-with.
+Building this image is challenging work. Because medical imaging datasets
+are a set 2D images taken at different points of space and time. It takes
+significant engineering work to construct the 3D object you see here that
+the user can interact with.
 -->
 
 ---
@@ -317,19 +313,15 @@ slide: Digital Imaging and Communications in Medicine
 
 
 <!--
-Now medical images are supposed to conform to a DICOM standard that specifies
-a non-proprietary image format that defines how to store and retrieve
-information in each 2D image. This information includes voxel data and
-other metadata (also known as tags) such as study date, image acquisition date,
-patient orientation and other patient information like name and date of birth.
-You can see five of these tags listed here.
+Medical images conform to a DICOM standard that defines how to store and
+retrieve information in each 2D image. This information includes image data
+and other metadata some of which are listed here.
 
-But this standard is very old and competes in complexity with the C++ standard.
-And because there is no enforcement mechanism, it is up to medical device
-manufacturers to decide how closely they follow the standard and what tags
-to populate. As a result, one may encounter real-world datasets in which
-required tags are missing or inconsistent across images. For a mission-critical
-medical software, this is a source of complexity and risk.
+But this standard is very old and because there is no enforcement mechanism, it
+is up to medical device manufacturers to decide how closely they follow the
+standard and what tags to populate. As a result, one may encounter real-world
+datasets in which required tags are missing or inconsistent across images. For
+a mission-critical medical software, this is a source of complexity and risk.
 -->
 
 ---
@@ -355,15 +347,10 @@ slide: What could go wrong?
 To make things more difficult, our software needed to support medical datasets
 that were created decades ago, when the standard was different, manufacturers
 were even less compliant to the standard, and the physical hardware used for
-taking images were more primitive.
-
-In contrast to modern imaging devices that take thousands of high-quality
-images with sub-millimeter precision, older machines could take as few as a
-hundred sparse images and their robotic arm moved with invariable speed,
-resulting in non-equidistant 2D images.
+taking images were more primitive, resulting in non-equidistant 2D images.
 
 A medical software designed for use by surgeons and clinicians cannot afford
-dismissing these subtle issues as they may lead to measurement discrepancies
+dismissing these issues as they may lead to measurement discrepancies
 that could be life-threatening.
 -->
 
@@ -373,28 +360,24 @@ slide: Everything could go wrong
 
 <div class="space-y-12">
   <div class="text-2xl px-16">
-    <quote>The inherent complexity of the real world and the continuous change
+    <q>The inherent complexity of the real world and the continuous change
     of requirements result in large and complex software systems that are
-    costly and difficult to maintain.</quote>
+    costly and difficult to maintain.</q>
   </div>
-  <div v-click class="italic text-center">
-    <quote>In a sufficiently long time horizon, all possible behaviors of your system will occur.</quote><span class="text-sm"> - Hyrum's law (modified)</span>
+  <div class="italic text-center">
+    <q>In a sufficiently long time horizon, all possible behaviors of your system will occur.</q><span class="text-sm"> - Hyrum's law (modified)</span>
   </div>
 </div>
 
 <!--
-So why am I sharing all this? I'm sharing to remind you:
+I share all this to remind you:
 
-1. that the Real world is messy, complicated and ever-changing.
-2. that Real world problems impose ever-changing constraints.
-3. and Real world software are expected to meet those constraints.
+1. that the real world is messy and complicated
+2. and imposes ever-changing constraints.
+3. and real world software are expected to meet those constraints.
 4. which is why they are large and complex.
-5. and like any large and complex system, real world software are difficult
-   to maintain.
 
-(click)
-
-This is because any changes to the system runs the risk of breaking it
+Because of this complexity, any changes to the system runs the risk of breaking it
 in ways that we do not expect. The interdependencies between system
 components and implicit assumptions made by each component are just too many
 to keep track of. This is why when building real-world software,
@@ -413,7 +396,7 @@ slide: Testing as risk mitigation
     <div>If every code change can break our software, how could we stay productive
   and safely introduce frequent changes?</div>
   </div>
-  <div v-click class="ml-12 w-3/4 wsl-card flex items-center space-x-4">
+  <div class="ml-12 w-3/4 wsl-card flex items-center space-x-4">
     <div><heroicons-light-bulb class="text-gray-300 text-xl" /></div>
     <div>Implement high-level tests and continuously run them at scale to cover real-world system behaviors with reasonable degree of confidence.</div>
   </div>
@@ -424,8 +407,6 @@ Defensive programming is a reasonable software development methodology.
 But validating every assumption is just not practical. So if we truly believe
 that every code change can break our software, how could we stay productive
 and find the courage and confidence to make frequent changes?
-
-(click)
 
 It's by establishing a mechanism to receive fast and reliable feedback
 on the impact of each code change. In practice, this means implementing
@@ -461,18 +442,14 @@ slide: Developer inner and outer loops
 <!--
 Most organizations attempt to implement this mechanism to a varying extent
 and degree of success. For example, they run unit tests and integration tests
-as part of the CI. But in most cases, higher-level system tests that provide
-more confidence are pushed to the testing phase of the software development
-life-cycle; the outer loop in the diagram you see here. This outer loop
-describes the SDLC at the organization level and each of its cycles is an
-iteration to the business product, such as a new version increment.
+as part of the CI. But in most cases, higher-level system tests are pushed
+to the testing phase of the software development life-cycle; the outer loop
+in the diagram you see here.
 
 But there is a separate loop at the developer level whose each cycle represents
-an iteration to the codebase, such as a change landing as a PR.
+an iteration to the codebase, like a PR that gets merged.
 This inner loop is incredibly important to the productivity of engineers and
-is expected to be well in sync with the outer loop, like cogs in a mechanical
-watch. But our decision as an industry to exclude higher-level system tests
-from the inner loop makes this synchronization uncommon.
+is expected to be well in sync with the outer loop.
 -->
 
 ---
@@ -532,13 +509,42 @@ slide: The myth of the testing pyramid
       </tbody>
     </table>
   </div>
-  <div class="space-y-4">
+  <div v-click class="space-y-4">
     <img class="rounded-lg mx-auto px-16" src="/images/testing-trophy.png" />
     <div class="text-xs rounded-lg bg-opacity-5 bg-white p-4 text-center">
       <span>"Write tests. Not too many. Mostly integration."</span><span> - <a class="text-sky-500" href="https://kentcdodds.com/blog/write-tests" target="_blank" rel="noreferrer">Guillermo Rauch</a></span>
     </div>
   </div>
 </div>
+
+<!--
+But excluding higher-level system tests from the inner loop makes this
+synchronization difficult. Historically, the prevalent argument has been
+that high-level tests are too difficult for developers to setup
+locally and run without the help of test engineers. And if you recall the
+popular testing pyramid, it's also because higher-level tests are deemed
+slower and more expensive to run.
+
+These are all valid arguments. But higher-level tests have advantages too.
+For example, they are easier to read; and because they cover more system
+components, they better represents the end-user environment, and are more
+reassuring than unit tests.
+So, as with anything in software, using higher-level tests is often a
+trade-off between costs and benefits.
+
+(click)
+
+But the commoditization of cloud compute resources and various improvements in
+developer tooling has reduced the cost of higher-level tests. And in many
+application domains, they are no longer prohibitively expensive to be part
+of the developer inner-loop.
+
+But why is this general industry trend less pronounced in C++ application domains?
+C++ applications are complex, mission-critical, and resource-intensive.
+So to test them and ensure that they meet our requirements, we need a large
+number of datasets that take time to run.
+So the concerns outlined here usually outweigh the benefits.
+-->
 
 ---
 slide: Continuous regression testing
@@ -574,6 +580,19 @@ slide: Continuous regression testing
   </div>
 </div>
 
+<!--
+But we can make a compromise to reduce these concerns by slightly changing
+the problem statement from "testing for correctness" to "testing for regression".
+You see, we often associate testing with verifying that our software is
+behaving correctly. But during development, it is enough to test that our
+software works as well as before.
+
+Testing for regression is easier and faster than testing for correctness
+because it removes the need for us to know the correct behavior of our
+software for each test case. So it can shift the balance towards the benefits
+of high-level tests.
+-->
+
 ---
 slide: Higher-level tests in practice
 ---
@@ -587,7 +606,7 @@ slide: Higher-level tests in practice
         <div class="wsl-text-secondary text-xs">lines of code</div>
       </div>
       <div class="wsl-card">
-        <div class="wsl-text-primary text-2xl">16,000<span>&thinsp;+</span></div>
+        <div class="wsl-text-primary text-2xl">12,000<span>&thinsp;+</span></div>
         <div class="wsl-text-secondary text-xs">real-world datasets</div>
       </div>
       <div class="wsl-card">
@@ -595,7 +614,7 @@ slide: Higher-level tests in practice
         <div class="wsl-text-secondary text-xs">attributes to verify</div>
       </div>
       <div class="wsl-card">
-        <div class="wsl-text-primary text-2xl">4,000<span>&thinsp;+</span></div>
+        <div class="wsl-text-primary text-2xl">16,000<span>&thinsp;+</span></div>
         <div class="wsl-text-secondary text-xs">gigabytes of input data</div>
       </div>
     </div>
@@ -611,6 +630,20 @@ slide: Higher-level tests in practice
     </LightOrDark>
   </div>
 </div>
+
+<!--
+Regression testing is not a new concept. Our industry has been using this
+testing method for decades. But often times, we use this method for testing
+certain types of changes, such as when performing migrations or doing rewrites.
+
+Remember that medical software I told you about? It had a data ingestion
+pipeline that took DICOM data from different sources and processed
+that data to produce an in-memory Volume that was then used by higher-level
+system components.
+
+And at some point, we wanted to rewrite all of that code to improve robustness
+and efficiency. And we used regression testing for that.
+-->
 
 ---
 slide: In-Memory Comparison
@@ -648,6 +681,20 @@ generate_summary_report();
 
   </div>
 </div>
+
+<!--
+But our custom purpose-built regression testing system was taking a long time
+to run and was so complex that it required its own maintenance and support.
+
+This system worked by loading any given test case, first with the new version
+of our pipeline and then with the older production version. And then it
+compared the output of those two systems that were two volume objects.
+
+And I always found it annoying that every time we ran this system, we had to
+feed our input to the old version of our pipeline, knowing full well,
+that it is going to produce the same result as before.
+This particular step felt like a waste of time and resources.
+-->
 
 ---
 slide: Snapshot Testing
@@ -690,6 +737,18 @@ generate_summary_report();
   </div>
 </div>
 
+<!--
+One way of making the test faster is storing the output
+of the old system somewhere and reusing it at test time so that we don't
+have to pay the cost of running the old pipeline again.
+
+And this is not a new concept either. This method of taking a snapshot of
+your software behavior and storing it to disk for future comparison is called
+snapshot testing or characterization testing.
+
+But this method has its own challenges.
+-->
+
 ---
 slide: "Problem: Debugging"
 ---
@@ -707,6 +766,17 @@ slide: "Problem: Debugging"
     <div class="wsl-card text-center text-sm">Good tests point to the root cause when they fail.</div>
   </div>
 </div>
+
+<!--
+For one, snapshot testing treats the system as a black box. Snapshot files
+only include the final output of the system so any important data that is
+not included in the output, cannot be tracked via this system. For complex
+multi-stage software workflows, this is a major limitation and one that makes
+it difficult to trace a difference to the root cause.
+
+(SKIP) Ideally, we want a system that enables capturing any number of data
+points from anywhere within our system.
+-->
 
 ---
 slide: "Problem: Reliability"
@@ -748,6 +818,21 @@ slide: "Problem: Reliability"
   </div>
 </div>
 
+<!--
+Another limitation of snapshot testing is that the system output is stored in
+the snapshot file as one single entity. There is no distinction between
+various data points in the output. Any small difference in any part of the
+snapshot file would be enough to trigger a mismatch.
+
+Consider this receipt, for example, as a possible output of a retail checkout
+system. If we want to test this system with snapshot testing, it would be
+tempting to store this output in a snapshot file. But the last line of the
+receipt includes a timestamp which is going to differ from one version to
+another. So even if the implementation of our system remains the same,
+our snapshot tests are going to fail, unless we massage the final output so
+that the content stored in the snapshot file remains deterministic.
+-->
+
 ---
 slide: "Problem: Data Management"
 ---
@@ -768,6 +853,14 @@ slide: "Problem: Data Management"
   </div>
 </div>
 
+<!--
+Another limitation is that most snapshot testing libraries advocate for
+storing snapshot files in the source code repository.
+This approach may be convenient at first, but it quickly breaks down at scale.
+Because in real-world software, the snapshot files may be too large in size
+or too many to track in version control.
+-->
+
 ---
 slide: "Problem: Reporting"
 ---
@@ -787,6 +880,16 @@ slide: "Problem: Reporting"
     <div class="wsl-card text-center text-sm">Good test systems report insights as output, not raw test results .</div>
   </div>
 </div>
+
+<!--
+And lastly, snapshot files don't preserve the type of our captured data.
+They often store the textual representation of our output which means
+mismatches are also reported as string differences which could be really
+difficult to collect insights from.
+
+(SKIP) Another implication of this is that we often need a separate step to
+convert our original output to the textual output that is stored in the file.
+-->
 
 ---
 slide: Design Principles
@@ -827,6 +930,19 @@ slide: Design Principles
   </div>
 </div>
 
+<!--
+So about 5 years ago, I started a side project to build a regression
+testing system to address the common limitations of snapshot testing.
+
+I wanted this new system to be tailored and optimized for use by developers,
+so it can be used continuously for testing day-to-day code changes. I wanted
+it to be flexible and provide fine-grained control over what data is captured
+and how it should be compared.
+
+And I wanted it to be scalable so that it can be used by my team and any other
+teams for testing complex real-world software.
+-->
+
 ---
 slide: Rethinking snapshot testing
 ---
@@ -841,6 +957,14 @@ slide: Rethinking snapshot testing
     </template>
   </LightOrDark>
 </div>
+
+<!--
+The overall architecture of that system was something like this, where a C++
+library would capture values of variables and runtime of functions from the
+workflow under test, then submit those captured data to a remote server, that
+handles everything from data retention and comparison against baseline, to
+reporting and visualizing differences.
+-->
 
 ---
 slide: About Touca
@@ -869,3 +993,16 @@ slide: About Touca
     <img src="/images/touca-techstars.jpg" class="rounded-2xl" />
   </div>
 </div>
+
+<!--
+This project was adopted by my team and gradually matured as a product
+to cover multiple critical workflows of our software. After another two
+years of building over nights and weekend, I was fortunate to receive the
+IP rights for it. So I started showing it to software engineers outside
+the company and in March 2021, their positive feedback made me decide to
+leave Canon and start working on this project full-time.
+
+I founded a company, re-branded the tool as Touca, and started selling it to
+other companies. The picture you see here is me presenting Touca at the
+Techstars demo day last year.
+-->

@@ -39,6 +39,8 @@ jobs:
           mkdir -p ./dist
           mv ./slides/redirect.html ./dist/index.html
           mv ./slides/cppcon23/dist ./dist/cppcon23
+          mkdir -p ./dist/cppcon23/images
+          mv ./slides/cppcon23/images/cppcon-title-page.png ./dist/cppcon23/images
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

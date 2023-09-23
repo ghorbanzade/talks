@@ -32,6 +32,8 @@ CppCon, The C++ Conference, Aurora, CO
 Continuous Regression Testing for Safer and Faster Refactoring
 
 - [Registration Link](https://cppcon2023.sched.com/event/1Qtgx/continuous-regression-testing-for-safer-and-faster-refactoring)
+- Slides ([html](https://pejman.dev/talks/cppcon23/),
+  [pdf](https://pejman.dev/talks/cppcon23/slides-cppcon23-pejman.pdf))
 
 ![CppCon2023](./slides/cppcon23/images/cppcon-cover.png)
 
