@@ -25,6 +25,20 @@ stability and maintainability of products with large ever-changing code bases.
 
 ## Upcoming Talks
 
+### October 24, 2023
+
+BazelCon, Munich, Germany
+
+Building a Great Web Development Experience with Bazel
+
+- [Registration Link](https://rsvp.withgoogle.com/events/bazelcon2023)
+
+![BazelCon23](./slides/bazelcon23/images/bazelcon-cover.png)
+
+## Previous Talks
+
+> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+
 ### October 2, 2023
 
 CppCon, The C++ Conference, Aurora, CO
@@ -36,10 +50,6 @@ Continuous Regression Testing for Safer and Faster Refactoring
   [pdf](https://pejman.dev/talks/cppcon23/slides-cppcon23-pejman.pdf))
 
 ![CppCon2023](./slides/cppcon23/images/cppcon-cover.png)
-
-## Previous Talks
-
-> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
 
 ### January 10, 2023
 
