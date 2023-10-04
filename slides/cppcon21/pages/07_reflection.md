@@ -166,3 +166,12 @@ slide: 'Conclusion'
 - Designing good software requires deep understanding of use cases.
 - Designing user-friendly extension points requires leveraging multiple language features.
 - C++ is evolving into a simpler, more readable, more maintainable language.
+
+---
+layout: center
+---
+
+<div class="text-center space-y-8">
+<div class="text-4xl font-600">Questions</div>
+<a href="https://github.com/ghorbanzade/cppcon21" target="_blank" class="font-mono text-lg block">https://github.com/ghorbanzade/cppcon21</a>
+</div>
