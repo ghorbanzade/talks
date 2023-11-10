@@ -7,3 +7,8 @@ cppcon23:
   - '.github/path-filters.yml'
   - '.github/workflows/pages.yml'
   - 'slides/cppcon23/**'
+
+bazelcon23:
+  - '.github/path-filters.yml'
+  - '.github/workflows/pages.yml'
+  - 'slides/bazelcon23/**'

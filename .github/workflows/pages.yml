@@ -129,11 +129,50 @@ jobs:
           path: ${{ github.workspace }}/cppcon21.tar.gz
           retention-days: 1
 
+  build-bazelcon23:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: .github/path-filters.yml
+      - name: authenticate to aws
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+        if: steps.changes.outputs.bazelcon23 == 'true'
+      - name: Prepare final artifact
+        run: |
+          mkdir -p ./dist/bazelcon23/images
+          mv ./slides/bazelcon23/redirect.html ./dist/bazelcon23/index.html
+          mv ./slides/bazelcon23/slides-bazelcon23-pejman.pdf ./dist/bazelcon23/
+          mv ./slides/bazelcon23/images/bazelcon-cover.png ./dist/bazelcon23/images/
+          tar -zcf bazelcon23.tar.gz ./dist
+        if: steps.changes.outputs.bazelcon23 == 'true'
+      - name: push api to aws
+        run: aws s3 cp bazelcon23.tar.gz ${{ secrets.AWS_BUCKET }}/
+        if: steps.changes.outputs.bazelcon23 == 'true'
+      - name: pull api from aws
+        run: |
+          aws s3 cp ${{ secrets.AWS_BUCKET }}/bazelcon23.tar.gz .
+          tar -zxf bazelcon23.tar.gz .
+        if: steps.changes.outputs.bazelcon23 == 'false'
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: bazelcon23
+          path: ${{ github.workspace }}/bazelcon23.tar.gz
+          retention-days: 1
+
   bundle:
     runs-on: ubuntu-latest
     needs:
       - build-cppcon21
       - build-cppcon23
+      - build-bazelcon23
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -147,10 +186,16 @@ jobs:
         with:
           name: cppcon23
           path: ${{ github.workspace }}
+      - name: Download BazelCon23 artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: bazelcon23
+          path: ${{ github.workspace }}
       - name: Add redirect page
         run: |
           tar -xf cppcon21.tar.gz
           tar -xf cppcon23.tar.gz
+          tar -xf bazelcon23.tar.gz
           mv ./slides/redirect.html ./dist/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
