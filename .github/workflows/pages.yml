@@ -29,7 +29,6 @@ jobs:
         with:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE }}
-        if: steps.changes.outputs.cppcon23 == 'true'
       - name: Setup Node
         uses: actions/setup-node@v3
         if: steps.changes.outputs.cppcon23 == 'true'
@@ -86,7 +85,6 @@ jobs:
         with:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE }}
-        if: steps.changes.outputs.cppcon21 == 'true'
       - name: Setup Node
         uses: actions/setup-node@v3
         if: steps.changes.outputs.cppcon21 == 'true'
@@ -143,7 +141,6 @@ jobs:
         with:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE }}
-        if: steps.changes.outputs.bazelcon23 == 'true'
       - name: Prepare final artifact
         run: |
           mkdir -p ./dist/bazelcon23/images
