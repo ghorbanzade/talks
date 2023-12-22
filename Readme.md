@@ -23,7 +23,9 @@ stability and maintainability of products with large ever-changing code bases.
 - [Website](https://pejman.dev)
 - [Profile Pictures](https://github.com/ghorbanzade/talks/tree/main/assets)
 
-## Upcoming Talks
+## Previous Talks
+
+> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
 
 ### October 24, 2023
 
@@ -32,12 +34,11 @@ BazelCon, Munich, Germany
 Building a Great Web Development Experience with Bazel
 
 - [Registration Link](https://rsvp.withgoogle.com/events/bazelcon2023)
+- Slides
+  ([pdf](https://pejman.dev/talks/bazelcon23/slides-bazelcon23-pejman.pdf))
+- [YouTube Video](https://youtu.be/Xs3E5SvSYg4)
 
 ![BazelCon23](./slides/bazelcon23/images/bazelcon-cover.png)
-
-## Previous Talks
-
-> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
 
 ### October 2, 2023
 
@@ -48,6 +49,7 @@ Continuous Regression Testing for Safer and Faster Refactoring
 - [Registration Link](https://cppcon2023.sched.com/event/1Qtgx/continuous-regression-testing-for-safer-and-faster-refactoring)
 - Slides ([html](https://pejman.dev/talks/cppcon23/),
   [pdf](https://pejman.dev/talks/cppcon23/slides-cppcon23-pejman.pdf))
+- [YouTube Video](https://youtu.be/c8Z3iSL9vYs)
 
 ![CppCon2023](./slides/cppcon23/images/cppcon-cover.png)
 
