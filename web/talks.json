@@ -5,13 +5,12 @@
     "conference": "BazelCon",
     "duration": 30,
     "tags": ["bazel", "build", "bazelcon", "highlighted"],
-    "highlighted": true,
     "title": "Building a Great Web Development Experience with Bazel",
     "links": {
       "registration": "https://rsvp.withgoogle.com/events/bazelcon2023",
       "pdf": "https://pejman.dev/talks/bazelcon23/slides-bazelcon23-pejman.pdf",
       "youtube": "https://youtu.be/Xs3E5SvSYg4",
-      "coverImage": "https://github.com/ghorbanzade/talks/blob/main/slides/bazelcon23/images/bazelcon-cover.png",
+      "cover": "https://github.com/ghorbanzade/talks/blob/main/slides/bazelcon23/images/bazelcon-cover.png",
       "repository": "https://github.com/ghorbanzade/talks/tree/main/slides/bazelcon23"
     }
   },
@@ -27,7 +26,7 @@
       "html": "https://pejman.dev/talks/cppcon23/",
       "pdf": "https://pejman.dev/talks/cppcon23/slides-cppcon23-pejman.pdf",
       "youtube": "https://youtu.be/c8Z3iSL9vYs",
-      "coverImage": "https://github.com/ghorbanzade/talks/blob/main/slides/cppcon23/images/cppcon-cover.png",
+      "cover": "https://github.com/ghorbanzade/talks/blob/main/slides/cppcon23/images/cppcon-cover.png",
       "repository": "https://github.com/ghorbanzade/talks/tree/main/slides/cppcon23"
     }
   },
