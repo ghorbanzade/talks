@@ -16,7 +16,7 @@
   },
   {
     "date": "02 October 2023",
-    "location": "Aurora, Colorado",
+    "location": "Aurora, CO",
     "conference": "CppCon",
     "duration": 60,
     "tags": ["cpp", "cppcon", "highlighted"],
@@ -32,7 +32,7 @@
   },
   {
     "date": "10 January 2023",
-    "location": "Sunnyvale, California",
+    "location": "Sunnyvale, CA",
     "conference": "San Francisco Bay Area C++ User Group",
     "duration": 60,
     "tags": ["cpp", "meetup"],
@@ -45,8 +45,90 @@
     }
   },
   {
+    "date": "12 May 2022",
+    "location": "Minneapolis, MN",
+    "conference": "Twin Cities Python User Group",
+    "duration": 30,
+    "tags": ["python", "meetup"],
+    "title": "Building Developer-Friendly Command-Line Tools in Python",
+    "links": {
+      "registration": "https://www.meetup.com/PyMNtos-Twin-Cities-Python-User-Group/events/285705542/"
+    }
+  },
+  {
+    "date": "05 May 2022",
+    "location": "Chicago, IL",
+    "conference": "Chicago Java User Group",
+    "duration": 60,
+    "tags": ["java", "meetup"],
+    "title": "Continuous Regression Testing in Java",
+    "links": {
+      "registration": "https://www.meetup.com/ChicagoJUG/events/285406777/",
+      "html": "https://touca.io/talks/cjug22/",
+      "pdf": "https://touca.io/talks/cjug22/slides-cjug22-pejman.pdf",
+      "youtube": "https://youtu.be/Qjnc1D2DzTc"
+    }
+  },
+  {
+    "date": "13 April 2022",
+    "location": "Denver, CO",
+    "conference": "Denver Java User Group",
+    "duration": 60,
+    "tags": ["java", "meetup"],
+    "title": "Improving Developer Productivity through Continuous Regression Testing",
+    "links": {
+      "registration": "https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/",
+      "youtube": "https://www.youtube.com/watch?v=6LtgbTdUJEQ",
+      "html": "https://touca.io/talks/djug22",
+      "pdf": "https://touca.io/talks/djug22/slides-djug22-pejman.pdf"
+    }
+  },
+  {
+    "date": "06 April 2022",
+    "location": "Minneapolis, MN",
+    "conference": "Twin Cities Test Automation Group",
+    "duration": 60,
+    "tags": ["java", "meetup"],
+    "title": "Continuous Regression Testing, Benefits and Challenges",
+    "links": {
+      "registration": "https://www.meetup.com/TC-TAG/events/284654695/"
+    }
+  },
+  {
+    "date": "28 March 2022",
+    "location": "Minneapolis, MN",
+    "conference": "Prime Digital Academy Alumni",
+    "duration": 60,
+    "tags": ["java", "meetup", "hide"],
+    "title": "Software Testing Best Practices",
+    "links": {}
+  },
+  {
+    "date": "15 March 2022",
+    "location": "Minneapolis, MN",
+    "conference": "Java MN User Group",
+    "duration": 60,
+    "tags": ["java", "meetup"],
+    "title": "Continuous Regression Testing in Java",
+    "links": {
+      "registration": "https://www.meetup.com/Java-User-Group-Hosted-by-TEKsystems/events/284076315/"
+    }
+  },
+  {
+    "date": "11 November 2021",
+    "location": "Jersey City, NJ",
+    "conference": "Jersey City Java User Group",
+    "duration": 30,
+    "tags": ["java", "meetup"],
+    "title": "Continuous Regression Testing Using Touca SDK for Java",
+    "links": {
+      "registration": "https://www.meetup.com/Jersey-City-Java-User-Group-JC-JUG/events/281715735/",
+      "youtube": "https://youtu.be/Nn5We6yQ8Kg"
+    }
+  },
+  {
     "date": "29 October 2021",
-    "location": "Aurora, Colorado",
+    "location": "Aurora, CO",
     "conference": "CppCon",
     "duration": 60,
     "tags": ["cpp", "cppcon", "highlighted"],
@@ -60,6 +142,76 @@
     }
   },
   {
+    "date": "12 October 2021",
+    "location": "Minneapolis, MN",
+    "conference": "Twin Cities Python User Group",
+    "duration": 30,
+    "tags": ["python", "meetup"],
+    "title": "Packaging and Publishing Libraries in Python",
+    "links": {
+      "registration": "https://www.meetup.com/PyMNtos-Twin-Cities-Python-User-Group/events/281028690/"
+    }
+  },
+  {
+    "date": "25 August 2021",
+    "location": "Minneapolis, MN",
+    "conference": "JavaScript MN User Group",
+    "duration": 30,
+    "tags": ["javascript", "meetup"],
+    "title": "Touca JavaScript SDK",
+    "links": {
+      "registration": "https://www.meetup.com/JavaScriptMN/events/qltnfsycclbhc/",
+      "youtube": "https://youtu.be/oXM1nxXkA3c"
+    }
+  },
+  {
+    "date": "19 August 2021",
+    "location": "New York City, NY",
+    "conference": "New York Python User Group",
+    "duration": 30,
+    "tags": ["python", "meetup"],
+    "title": "Touca Python SDK",
+    "links": {
+      "registration": "https://www.meetup.com/nycpython/events/jfmxdsycclbzb/",
+      "youtube": "https://youtu.be/lAr0EAZRjdQ"
+    }
+  },
+  {
+    "date": "18 August 2021",
+    "location": "San Francisco, CA",
+    "conference": "San Francisco Python User Group",
+    "duration": 20,
+    "tags": ["python", "meetup"],
+    "title": "Regression Testing with Touca",
+    "links": {
+      "registration": "https://www.meetup.com/sfpython/events/mpgbhsycclbxb/",
+      "youtube": "https://youtu.be/3hnHk-Lf0fQ"
+    }
+  },
+  {
+    "date": "22 July 2021",
+    "location": "Saint Paul, MN",
+    "conference": "MinneDemo",
+    "duration": 10,
+    "tags": ["python", "event", "demo"],
+    "title": "Touca Regression Testing System",
+    "links": {
+      "registration": "https://minnestar.org/your-ultimate-guide-to-minnedemo35/",
+      "youtube": "https://youtu.be/4RU1-k3tElU"
+    }
+  },
+  {
+    "date": "08 July 2021",
+    "location": "Minneapolis, MN",
+    "conference": "Twin Cities Python User Group",
+    "duration": 30,
+    "tags": ["python", "meetup"],
+    "title": "Regression Testing with Touca",
+    "links": {
+      "registration": "https://www.meetup.com/PyMNtos-Twin-Cities-Python-User-Group/events/278900280/"
+    }
+  },
+  {
     "date": "25 June 2021",
     "conference": "CppCast Podcast",
     "duration": 60,
@@ -67,7 +219,30 @@
     "title": "Regression Testing with Touca",
     "links": {
       "youtube": "https://youtu.be/Pw8ZD5WZYl0",
-      "repository": "https://cppcast.com/touca/"
+      "repository": "https://cppcast.com/touca/",
+      "cover": "https://img.youtube.com/vi/Pw8ZD5WZYl0/0.jpg"
+    }
+  },
+  {
+    "date": "15 December 2017",
+    "location": "Minneapolis, MN",
+    "conference": "IoTFuse Meetup",
+    "duration": 30,
+    "tags": ["cpp", "meetup"],
+    "title": "Swish: A Real-Time Hand Gesture Recognition Library",
+    "links": {
+      "registration": "https://www.meetup.com/applied_ai/events/243018155/"
+    }
+  },
+  {
+    "date": "21 April 2017",
+    "location": "Minneapolis, MN",
+    "conference": "IoTFuse Conference",
+    "duration": 30,
+    "tags": ["cpp", "demo"],
+    "title": "Sloth: An Energy-Efficient Real-Time Activity Recognition System",
+    "links": {
+      "registration": "https://iotfuseconference2017.sched.com/"
     }
   }
 ]
