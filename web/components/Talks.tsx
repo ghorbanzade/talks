@@ -3,7 +3,6 @@
 
 import { useState } from 'react';
 import { format } from 'date-fns';
-import { FiStar } from 'react-icons/fi';
 import Markdown from 'markdown-to-jsx';
 import type { Talk, View } from '@/components/types';
 import ViewToggleButton from '@/components/ViewToggleButton';
@@ -13,7 +12,7 @@ export default function Talks({ talks }: { talks: Talk[] }) {
   const ViewComponent = view === 'list' ? ListView : GridView;
   return (
     <>
-      <div className="flex justify-end px-6">
+      <div className="flex justify-end">
         <ViewToggleButton view={view} setView={setView} />
       </div>
       <div>
@@ -50,13 +49,10 @@ function ListEntry({ talk }: { talk: Talk }) {
                 <span className="font-light">, {talk.location}</span>
               )}
             </div>
-            {talk.tags.includes('highlight') && (
-              <FiStar className="text-slate-300" />
-            )}
           </div>
           <div className="text-xl">{talk.title}</div>
           <div className="flex space-x-6">
-            {talk.abstract && (
+            {talk.abstract && !talk.tags.includes('hide-abstract') && (
               <a onClick={() => setAbstractVisible(!isAbstractVisible)}>
                 Abstract
               </a>
@@ -87,7 +83,6 @@ function ListEntry({ talk }: { talk: Talk }) {
       </div>
       {talk.abstract && isAbstractVisible && (
         <div className="py-4">
-          <div className="font-semibold">Abstract</div>
           <Markdown className="wsl-mark prose prose-base prose-slate min-w-full dark:prose-invert">
             {talk.abstract}
           </Markdown>

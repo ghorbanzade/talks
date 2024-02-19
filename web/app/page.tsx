@@ -3,6 +3,7 @@
 import DarkModeButton from '@/components/DarkModeButton';
 import Talks from '@/components/Talks';
 import type { Talk } from '@/components/types';
+import NavBar from '@/components/NavBar';
 
 async function getTalks(): Promise<Talk[]> {
   const content = await fetch(
@@ -25,6 +26,7 @@ export default async function Home() {
   return (
     <main>
       <div className="mx-auto max-w-screen-lg space-y-4 py-4">
+        <NavBar />
         <div className="relative min-h-24 rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border">
           <div className="prose dark:prose-invert">
             <div className="text-2xl">Public Talks</div>

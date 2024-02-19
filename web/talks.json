@@ -37,7 +37,7 @@
     "location": "Sunnyvale, CA",
     "conference": "San Francisco Bay Area C++ User Group",
     "duration": 60,
-    "tags": ["cpp", "meetup", "highlight"],
+    "tags": ["cpp", "meetup", "highlight", "hide-abstract"],
     "title": "Finding regressions in mission critical software workflows",
     "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. This talk outlines some of these methods with a focus on regression testing which helps us compare the behavior of a given version of our software against a previous version, for a variety of test inputs. We review some of the well-known open-source regression testing solutions available in the C++ ecosystem. We use hands-on demos to show the practical challenges of using these tools for testing real-world software, and the benefits of fast feedback cycles on improving developer productivity and software release confidence.",
     "links": {
@@ -63,7 +63,7 @@
     "location": "Chicago, IL",
     "conference": "Chicago Java User Group",
     "duration": 60,
-    "tags": ["java", "meetup"],
+    "tags": ["java", "meetup", "hide-abstract"],
     "title": "Continuous Regression Testing in Java",
     "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. One of these methods is regression testing which helps us compare the behavior of a given version of our software against a previous version, using a large number of test cases. In this talk, we will review the benefits and challenges of using regression testing in real-world software development projects. We will outline some of the existing regression testing tools in the Java ecosystem and take a close look at the ApprovalTests library. We will also see a hands-on demo of a novel continuous regression testing solution and compare it against other available tools.",
     "links": {
@@ -78,7 +78,7 @@
     "location": "Denver, CO",
     "conference": "Denver Java User Group",
     "duration": 60,
-    "tags": ["java", "meetup"],
+    "tags": ["java", "meetup", "hide-abstract"],
     "title": "Improving Developer Productivity through Continuous Regression Testing",
     "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. One of these methods is regression testing which helps us compare the behavior of a given version of our software against a previous version, using a large number of test cases. This talk outlines the benefits and challenges of continuous regression testing in the development of real-world software, reviews some of the well-known regression testing tools available in the Java ecosystem, and introduces a new tool with a novel approach to regression testing, to show the impact of continuous software testing on improving developer productivity and software development efficiency.",
     "links": {
@@ -93,7 +93,7 @@
     "location": "Minneapolis, MN",
     "conference": "Twin Cities Test Automation Group",
     "duration": 60,
-    "tags": ["java", "meetup"],
+    "tags": ["java", "meetup", "hide-abstract"],
     "title": "Continuous Regression Testing, Benefits and Challenges",
     "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. One of these methods is regression testing that helps us compare the behavior of a given version of our software against a previous version, using a large number of test cases. This talk outlines the benefits and challenges of continuous regression testing in development of real-world software, reviews some of the well-known regression testing tools available in the market, and introduces a new tool with a novel approach to regression testing, to show the impact of continuous software testing on improving software development efficiency and reducing software release cycles.",
     "links": {
@@ -123,7 +123,7 @@
     "location": "Jersey City, NJ",
     "conference": "Jersey City Java User Group",
     "duration": 30,
-    "tags": ["java", "meetup"],
+    "tags": ["java", "meetup", "hide-abstract"],
     "title": "Continuous Regression Testing Using Touca SDK for Java",
     "abstract": "Making code changes to real-world software systems without introducing unintended side-effects is non-trivial. There are methods and tools to help us mitigate the inherent risks. One of these methods is regression testing that helps us verify the behavior of our software using a large number of test cases. But regression testing frameworks are clunky, have high maintenance costs, and produce results that are difficult to manage at scale. These limitations have largely made their use an after-thought for most software teams.\n\nTouca is an early-stage startup trying to rethink regression testing. They offer open-source SDKs that enable describing the behavior and performance of software workflows by capturing values of variables and runtime of functions. They remotely compare this description against a previous trusted version and report differences in near real-time.\n\nJoin us for an interactive session to explore this new approach to regression testing and to evaluate Touca's implementation of that approach. We will try their new Java SDK (https://github.com/trytouca/touca-java) to see if we can safely refactor two well-known code Katas in a friendly ensemble programming session. We will take turns to share our thoughts about this new approach, and share general tips about changing real-world code-bases safely and efficiently.",
     "links": {
