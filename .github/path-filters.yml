@@ -1,14 +1,19 @@
 cppcon21:
   - '.github/path-filters.yml'
-  - '.github/workflows/pages.yml'
+  - '.github/workflows/main.yml'
   - 'slides/cppcon21/**'
 
 cppcon23:
   - '.github/path-filters.yml'
-  - '.github/workflows/pages.yml'
+  - '.github/workflows/main.yml'
   - 'slides/cppcon23/**'
 
 bazelcon23:
   - '.github/path-filters.yml'
-  - '.github/workflows/pages.yml'
+  - '.github/workflows/main.yml'
   - 'slides/bazelcon23/**'
+
+web:
+  - '.github/path-filters.yml'
+  - '.github/workflows/main.yml'
+  - 'web/**'

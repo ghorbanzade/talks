@@ -7,6 +7,7 @@
     "export": "slidev export"
   },
   "devDependencies": {
-    "@iconify-json/heroicons-solid": "^1.1.8"
+    "@iconify-json/heroicons-solid": "^1.1.8",
+    "playwright-chromium": "^1.41.2"
   }
 }
