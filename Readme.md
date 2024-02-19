@@ -25,7 +25,7 @@ stability and maintainability of products with large ever-changing code bases.
 
 ## Previous Talks
 
-> [Playlist of recorded talks on YouTube](https://www.youtube.com/playlist?list=PL5-_QXYHJoVR99sDXo56_EFaIY4TE5rYj)
+> [Playlist of recorded talks on YouTube](https://youtube.com/playlist?list=PLQVvooLk5bit_HuksD-iRyfAj0XMXRLxd)
 
 ### October 24, 2023
 
