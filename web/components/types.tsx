@@ -23,3 +23,5 @@ export type Talk = {
   abstract?: string;
   links: Links;
 };
+
+export type View = 'list' | 'grid';

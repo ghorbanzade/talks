@@ -5,9 +5,29 @@ import { useState } from 'react';
 import { format } from 'date-fns';
 import { FiStar } from 'react-icons/fi';
 import Markdown from 'markdown-to-jsx';
-import type { Talk } from '@/components/types';
+import type { Talk, View } from '@/components/types';
+import ViewToggleButton from '@/components/ViewToggleButton';
 
-export default function ListView({ talks }: { talks: Talk[] }) {
+export default function Talks({ talks }: { talks: Talk[] }) {
+  const [view, setView] = useState<View>('list');
+  const ViewComponent = view === 'list' ? ListView : GridView;
+  return (
+    <>
+      <div className="flex justify-end px-6">
+        <ViewToggleButton view={view} setView={setView} />
+      </div>
+      <div>
+        <ViewComponent talks={talks} />
+      </div>
+    </>
+  );
+}
+
+function GridView({ talks }: { talks: Talk[] }) {
+  return <div>Hello</div>;
+}
+
+function ListView({ talks }: { talks: Talk[] }) {
   return (
     <div className="rounded-lg border-slate-300 bg-white px-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border divide-y divide-slate-300 dark:divide-slate-800">
       {talks.map((talk, index) => (
@@ -41,18 +61,18 @@ function ListEntry({ talk }: { talk: Talk }) {
                 Abstract
               </a>
             )}
-            {talk.links?.registration && (
+            {talk.links.registration && (
               <a href={talk.links.registration} target="_blank">
                 Registration
               </a>
             )}
-            {talk.links?.youtube && (
+            {talk.links.youtube && (
               <a href={talk.links.youtube} target="_blank">
                 Recording
               </a>
             )}
             <SlidesLink links={talk.links} />
-            {talk.links?.repository && (
+            {talk.links.repository && (
               <a href={talk.links.repository} target="_blank">
                 Repository
               </a>
@@ -78,15 +98,23 @@ function ListEntry({ talk }: { talk: Talk }) {
 }
 
 function SlidesLink({ links }: { links: Talk['links'] }) {
-  return links.pdf || links.html ? (
-    <div>
-      <span>Slides (</span>
-      {links.html && <a href={links.html}>HTML</a>}
-      {links.html && links.pdf && <span>, </span>}
-      {links.pdf && <a href={links.pdf}>PDF</a>}
-      <span>)</span>
-    </div>
-  ) : (
-    <></>
+  return (
+    (links.pdf || links.html) && (
+      <div>
+        <span>Slides (</span>
+        {links.html && (
+          <a href={links.html} target="_blank">
+            HTML
+          </a>
+        )}
+        {links.html && links.pdf && <span>, </span>}
+        {links.pdf && (
+          <a href={links.pdf} target="_blank">
+            PDF
+          </a>
+        )}
+        <span>)</span>
+      </div>
+    )
   );
 }

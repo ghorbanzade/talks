@@ -37,7 +37,7 @@
     "location": "Sunnyvale, CA",
     "conference": "San Francisco Bay Area C++ User Group",
     "duration": 60,
-    "tags": ["cpp", "meetup"],
+    "tags": ["cpp", "meetup", "highlight"],
     "title": "Finding regressions in mission critical software workflows",
     "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. This talk outlines some of these methods with a focus on regression testing which helps us compare the behavior of a given version of our software against a previous version, for a variety of test inputs. We review some of the well-known open-source regression testing solutions available in the C++ ecosystem. We use hands-on demos to show the practical challenges of using these tools for testing real-world software, and the benefits of fast feedback cycles on improving developer productivity and software release confidence.",
     "links": {
@@ -145,6 +145,17 @@
       "pdf": "https://pejman.dev/talks/cppcon21/slides-cppcon23-pejman.pdf",
       "youtube": "https://youtu.be/2dvZR2zemrM",
       "repository": "https://github.com/ghorbanzade/cppcon21"
+    }
+  },
+  {
+    "date": "27 October 2021",
+    "location": "Aurora, CO",
+    "conference": "CppCon",
+    "duration": 5,
+    "tags": ["cpp", "cppcon", "lightning"],
+    "title": "Zero Cost Regressions",
+    "links": {
+      "youtube": "https://youtu.be/8nlXVJSnOe8"
     }
   },
   {

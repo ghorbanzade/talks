@@ -1,7 +1,7 @@
 // Copyright 2024 Pejman Ghorbanzade
 
-import DarkModeButton from '@/components/darkMode';
-import ListView from '@/components/ListView';
+import DarkModeButton from '@/components/DarkModeButton';
+import Talks from '@/components/Talks';
 import type { Talk } from '@/components/types';
 
 async function getTalks(): Promise<Talk[]> {
@@ -34,9 +34,7 @@ export default async function Home() {
             <DarkModeButton />
           </div>
         </div>
-        <div>
-          <ListView talks={talks} />
-        </div>
+        <Talks talks={talks} />
       </div>
     </main>
   );
