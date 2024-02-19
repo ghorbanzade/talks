@@ -4,13 +4,14 @@
     "location": "Munich, Germany",
     "conference": "BazelCon",
     "duration": 30,
-    "tags": ["bazel", "build", "bazelcon", "highlighted"],
+    "tags": ["bazel", "highlight"],
     "title": "Building a Great Web Development Experience with Bazel",
+    "abstract": "Web application developers have high standards in developer experience including fast build and test times, short feedback cycles, and easy dependency management. Using Bazel to deliver an intuitive web development workflow that meets these expectations involves solving numerous challenges.\n\nThis talk shares our experience using Bazel’s NodeJS toolchain and the various Aspect.build’s rules repositories to accelerate the development and maintenance of our 40+ web applications across Aurora. We will show how we used Bazel's JSON Trace Profiling to find performance improvement opportunities that helped us reduce our application build times by 50% and test execution times by 70%. We will share how we combined Vite and iBazel to enable hot module replacement and achieve fast iteration loops, and used Gazelle and PNPM to simplify the management of NPM dependencies across our Bazel monorepo.",
     "links": {
       "registration": "https://rsvp.withgoogle.com/events/bazelcon2023",
       "pdf": "https://pejman.dev/talks/bazelcon23/slides-bazelcon23-pejman.pdf",
       "youtube": "https://youtu.be/Xs3E5SvSYg4",
-      "cover": "https://github.com/ghorbanzade/talks/blob/main/slides/bazelcon23/images/bazelcon-cover.png",
+      "cover": "https://raw.githubusercontent.com/ghorbanzade/talks/main/slides/bazelcon23/images/bazelcon-cover.png",
       "repository": "https://github.com/ghorbanzade/talks/tree/main/slides/bazelcon23"
     }
   },
@@ -19,14 +20,15 @@
     "location": "Aurora, CO",
     "conference": "CppCon",
     "duration": 60,
-    "tags": ["cpp", "cppcon", "highlighted"],
+    "tags": ["cpp", "highlight"],
     "title": "Continuous Regression Testing for Safer and Faster Refactoring",
+    "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. To mitigate this risk, engineering teams significantly invest in adopting various software testing practices. Despite best efforts, effectively and reliably identifying software regressions remains a challenge and results in long feedback cycles that hurt developer productivity. This problem is more pronounced in C++ software systems, given that their application domains often impose tight requirements on system safety and performance.\n\nThis talk shows you how continuous regression testing can help you find regressions in behavior or performance of your software during the development stage. It is a practical walk-through of how to build a regression testing framework in C++, how to use it to write effective regression tests, and how to integrate it with your CI pipeline to automate the execution of your tests as part of the CI or on a dedicated test server. It also includes recommendations on how to avoid common design pitfalls that lead to tests that are either flaky or untrustworthy or difficult to run at scale.\n\nThis talk also introduces a free and open-source software for continuous regression testing C++ applications. We will use a series of hands-on demos to showcase the end-to-end workflow of finding regressions in common C++ development scenarios including refactoring functions, upgrading dependencies, and updating the build toolchain. We also show a few less common use-cases such as profiling the size of binaries and tracking the exported symbols of a shared library, to inspire you to think how regression testing could unlock faster and safer refactoring for you and your team.",
     "links": {
       "registration": "https://cppcon2023.sched.com/event/1Qtgx/continuous-regression-testing-for-safer-and-faster-refactoring",
       "html": "https://pejman.dev/talks/cppcon23/",
       "pdf": "https://pejman.dev/talks/cppcon23/slides-cppcon23-pejman.pdf",
       "youtube": "https://youtu.be/c8Z3iSL9vYs",
-      "cover": "https://github.com/ghorbanzade/talks/blob/main/slides/cppcon23/images/cppcon-cover.png",
+      "cover": "https://raw.githubusercontent.com/ghorbanzade/talks/main/slides/cppcon23/images/cppcon-cover.png",
       "repository": "https://github.com/ghorbanzade/talks/tree/main/slides/cppcon23"
     }
   },
@@ -37,6 +39,7 @@
     "duration": 60,
     "tags": ["cpp", "meetup"],
     "title": "Finding regressions in mission critical software workflows",
+    "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. This talk outlines some of these methods with a focus on regression testing which helps us compare the behavior of a given version of our software against a previous version, for a variety of test inputs. We review some of the well-known open-source regression testing solutions available in the C++ ecosystem. We use hands-on demos to show the practical challenges of using these tools for testing real-world software, and the benefits of fast feedback cycles on improving developer productivity and software release confidence.",
     "links": {
       "registration": "https://www.meetup.com/cpp-bay-area/events/290564227/",
       "html": "https://touca.io/talks/cppbay23/",
@@ -62,6 +65,7 @@
     "duration": 60,
     "tags": ["java", "meetup"],
     "title": "Continuous Regression Testing in Java",
+    "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. One of these methods is regression testing which helps us compare the behavior of a given version of our software against a previous version, using a large number of test cases. In this talk, we will review the benefits and challenges of using regression testing in real-world software development projects. We will outline some of the existing regression testing tools in the Java ecosystem and take a close look at the ApprovalTests library. We will also see a hands-on demo of a novel continuous regression testing solution and compare it against other available tools.",
     "links": {
       "registration": "https://www.meetup.com/ChicagoJUG/events/285406777/",
       "html": "https://touca.io/talks/cjug22/",
@@ -76,6 +80,7 @@
     "duration": 60,
     "tags": ["java", "meetup"],
     "title": "Improving Developer Productivity through Continuous Regression Testing",
+    "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. One of these methods is regression testing which helps us compare the behavior of a given version of our software against a previous version, using a large number of test cases. This talk outlines the benefits and challenges of continuous regression testing in the development of real-world software, reviews some of the well-known regression testing tools available in the Java ecosystem, and introduces a new tool with a novel approach to regression testing, to show the impact of continuous software testing on improving developer productivity and software development efficiency.",
     "links": {
       "registration": "https://www.meetup.com/DenverJavaUsersGroup/events/cpmtcqydcgbrb/",
       "youtube": "https://www.youtube.com/watch?v=6LtgbTdUJEQ",
@@ -90,6 +95,7 @@
     "duration": 60,
     "tags": ["java", "meetup"],
     "title": "Continuous Regression Testing, Benefits and Challenges",
+    "abstract": "Making code changes to real-world software systems runs the risk of introducing unintended side-effects that are costly to find and fix. There are methods and tools to help us mitigate the inherent risks. One of these methods is regression testing that helps us compare the behavior of a given version of our software against a previous version, using a large number of test cases. This talk outlines the benefits and challenges of continuous regression testing in development of real-world software, reviews some of the well-known regression testing tools available in the market, and introduces a new tool with a novel approach to regression testing, to show the impact of continuous software testing on improving software development efficiency and reducing software release cycles.",
     "links": {
       "registration": "https://www.meetup.com/TC-TAG/events/284654695/"
     }
@@ -110,9 +116,7 @@
     "duration": 60,
     "tags": ["java", "meetup"],
     "title": "Continuous Regression Testing in Java",
-    "links": {
-      "registration": "https://www.meetup.com/Java-User-Group-Hosted-by-TEKsystems/events/284076315/"
-    }
+    "links": {}
   },
   {
     "date": "11 November 2021",
@@ -121,6 +125,7 @@
     "duration": 30,
     "tags": ["java", "meetup"],
     "title": "Continuous Regression Testing Using Touca SDK for Java",
+    "abstract": "Making code changes to real-world software systems without introducing unintended side-effects is non-trivial. There are methods and tools to help us mitigate the inherent risks. One of these methods is regression testing that helps us verify the behavior of our software using a large number of test cases. But regression testing frameworks are clunky, have high maintenance costs, and produce results that are difficult to manage at scale. These limitations have largely made their use an after-thought for most software teams.\n\nTouca is an early-stage startup trying to rethink regression testing. They offer open-source SDKs that enable describing the behavior and performance of software workflows by capturing values of variables and runtime of functions. They remotely compare this description against a previous trusted version and report differences in near real-time.\n\nJoin us for an interactive session to explore this new approach to regression testing and to evaluate Touca's implementation of that approach. We will try their new Java SDK (https://github.com/trytouca/touca-java) to see if we can safely refactor two well-known code Katas in a friendly ensemble programming session. We will take turns to share our thoughts about this new approach, and share general tips about changing real-world code-bases safely and efficiently.",
     "links": {
       "registration": "https://www.meetup.com/Jersey-City-Java-User-Group-JC-JUG/events/281715735/",
       "youtube": "https://youtu.be/Nn5We6yQ8Kg"
@@ -131,8 +136,9 @@
     "location": "Aurora, CO",
     "conference": "CppCon",
     "duration": 60,
-    "tags": ["cpp", "cppcon", "highlighted"],
+    "tags": ["cpp", "cppcon", "highlight"],
     "title": "Building an Extensible Type Serialization System Using Partial Template Specialization",
+    "abstract": "As software engineers, we all prefer using performant libraries with user-friendly interfaces. But designing a template-free interface can be challenging for some C++ libraries, like serialization libraries, that need to support generic values but handle them differently based on their type.\n\nThis talk shows how we can leverage partial template specialization to implement a generic user-friendly API that can be extended to support custom user-defined types. As a proof of concept, I will showcase an extensible type serialization system, that is built on top of the FlatBuffers serialization library, and enables users to register custom serializers for their user-defined types to support their automatic serialization at runtime.\n\nTemplate programming is generally known to be associated with long type names and indecipherable compile-time errors. This presentation includes examples and recommendations that help C++ engineers to create more expressive and easy-to-understand implementations. Finally, the talk describes how C++20 features like Concepts can further simplify those implementations and facilitate designing elegant user-friendly programming interfaces.",
     "links": {
       "registration": "https://cppcon2021.sched.com/event/nvDM/building-an-extensible-type-serialization-system-using-partial-template-specialization",
       "html": "https://pejman.dev/talks/cppcon21/",
@@ -215,8 +221,9 @@
     "date": "25 June 2021",
     "conference": "CppCast Podcast",
     "duration": 60,
-    "tags": ["cpp", "podcast", "highlighted"],
+    "tags": ["cpp", "podcast", "highlight"],
     "title": "Regression Testing with Touca",
+    "abstract": "Rob and Jason are joined by Pejman Ghorbanzade. They first talk about changes to the format library to enable better compile time errors, and some conference news from CppCon, C++ on Sea and NDC TechTown. Then they talk to Pejman about Touca, a new tool he's created for continuous regression testing.",
     "links": {
       "youtube": "https://youtu.be/Pw8ZD5WZYl0",
       "repository": "https://cppcast.com/touca/",
@@ -241,6 +248,7 @@
     "duration": 30,
     "tags": ["cpp", "demo"],
     "title": "Sloth: An Energy-Efficient Real-Time Activity Recognition System",
+    "abstract": "It is a bitter reality that all around the world, there are elderly people living alone and independent of their family members. Modern age has made many of us so busy at times that we forget (or neglect) spending enough times with our beloved ones. Yet, it is in this stage of life where one is more prone to health threats and in need of attention than ever before. Living in retirement resorts is often against self confidence and other daily home nursing options are too expensive, if not intrusive, to think of. Yet, in this modern age of technology, cannot we propose any affordable solution that allows constant supervision of the elderly by their trusted physicians while respecting their privacy and preserving their independence?\n\nTo tackle the above-mentioned challenge, we propose Sloth: An end-to-end wearable activity recognition system that allows real-time monitoring of activities of daily living. Sensor-based activity recognition blends wearable computing with internet of things to create a wireless network of small-sized embedded sensor platforms that can detect activities of daily living (e.g. walking, eating, cooking, writing) in real-time and over a long period of time.\n\nAttaching a few accelerometers to different body parts, we aim to collect human physical motions and transmit them to a central node where we can interpret the type of activity being performed and transmit it to the cloud where it can be accessed by privileged users.",
     "links": {
       "registration": "https://iotfuseconference2017.sched.com/"
     }
