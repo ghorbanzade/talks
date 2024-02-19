@@ -202,7 +202,6 @@ jobs:
         if: steps.changes.outputs.web == 'true'
       - name: Prepare final artifact
         run: |
-          mkdir -p ./dist
           mv ./web/out ./dist/
           tar -zcf web.tar.gz ./dist
         if: steps.changes.outputs.web == 'true'

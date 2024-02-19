@@ -1,0 +1,74 @@
+[
+  {
+    "date": "24 October 2023",
+    "location": "Munich, Germany",
+    "conference": "BazelCon",
+    "duration": 30,
+    "tags": ["bazel", "build", "bazelcon", "highlighted"],
+    "highlighted": true,
+    "title": "Building a Great Web Development Experience with Bazel",
+    "links": {
+      "registration": "https://rsvp.withgoogle.com/events/bazelcon2023",
+      "pdf": "https://pejman.dev/talks/bazelcon23/slides-bazelcon23-pejman.pdf",
+      "youtube": "https://youtu.be/Xs3E5SvSYg4",
+      "coverImage": "https://github.com/ghorbanzade/talks/blob/main/slides/bazelcon23/images/bazelcon-cover.png",
+      "repository": "https://github.com/ghorbanzade/talks/tree/main/slides/bazelcon23"
+    }
+  },
+  {
+    "date": "02 October 2023",
+    "location": "Aurora, Colorado",
+    "conference": "CppCon",
+    "duration": 60,
+    "tags": ["cpp", "cppcon", "highlighted"],
+    "title": "Continuous Regression Testing for Safer and Faster Refactoring",
+    "links": {
+      "registration": "https://cppcon2023.sched.com/event/1Qtgx/continuous-regression-testing-for-safer-and-faster-refactoring",
+      "html": "https://pejman.dev/talks/cppcon23/",
+      "pdf": "https://pejman.dev/talks/cppcon23/slides-cppcon23-pejman.pdf",
+      "youtube": "https://youtu.be/c8Z3iSL9vYs",
+      "coverImage": "https://github.com/ghorbanzade/talks/blob/main/slides/cppcon23/images/cppcon-cover.png",
+      "repository": "https://github.com/ghorbanzade/talks/tree/main/slides/cppcon23"
+    }
+  },
+  {
+    "date": "10 January 2023",
+    "location": "Sunnyvale, California",
+    "conference": "San Francisco Bay Area C++ User Group",
+    "duration": 60,
+    "tags": ["cpp", "meetup"],
+    "title": "Finding regressions in mission critical software workflows",
+    "links": {
+      "registration": "https://www.meetup.com/cpp-bay-area/events/290564227/",
+      "html": "https://touca.io/talks/cppbay23/",
+      "pdf": "https://touca.io/talks/cppbay23/slides-cppbay23-pejman.pdf",
+      "repository": "https://github.com/ghorbanzade/talks/tree/main/slides/cppbay23"
+    }
+  },
+  {
+    "date": "29 October 2021",
+    "location": "Aurora, Colorado",
+    "conference": "CppCon",
+    "duration": 60,
+    "tags": ["cpp", "cppcon", "highlighted"],
+    "title": "Building an Extensible Type Serialization System Using Partial Template Specialization",
+    "links": {
+      "registration": "https://cppcon2021.sched.com/event/nvDM/building-an-extensible-type-serialization-system-using-partial-template-specialization",
+      "html": "https://pejman.dev/talks/cppcon21/",
+      "pdf": "https://pejman.dev/talks/cppcon21/slides-cppcon23-pejman.pdf",
+      "youtube": "https://youtu.be/2dvZR2zemrM",
+      "repository": "https://github.com/ghorbanzade/cppcon21"
+    }
+  },
+  {
+    "date": "25 June 2021",
+    "conference": "CppCast Podcast",
+    "duration": 60,
+    "tags": ["cpp", "podcast", "highlighted"],
+    "title": "Regression Testing with Touca",
+    "links": {
+      "youtube": "https://youtu.be/Pw8ZD5WZYl0",
+      "repository": "https://cppcast.com/touca/"
+    }
+  }
+]
