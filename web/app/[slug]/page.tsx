@@ -2,7 +2,7 @@
 
 import DarkModeButton from '@/components/DarkModeButton';
 import NavBar from '@/components/NavBar';
-import TalkEntry from '@/components/TalkEntry';
+import TalkPageContent from '@/components/TalkPageContent';
 import { getTalks } from '@/components/utils';
 
 export async function generateStaticParams() {
@@ -24,7 +24,7 @@ export default async function Home({ params }: { params: { slug: string } }) {
             <DarkModeButton />
           </div>
         </div>
-        <TalkEntry talk={talk} />
+        <TalkPageContent talk={talk} />
       </div>
     </main>
   );

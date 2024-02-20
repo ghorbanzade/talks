@@ -2,7 +2,7 @@
 
 import DarkModeButton from '@/components/DarkModeButton';
 import NavBar from '@/components/NavBar';
-import Talks from '@/components/Talks';
+import TalksPageContent from '@/components/TalksPageContent';
 import { getTalks } from '@/components/utils';
 
 export default async function Home() {
@@ -20,7 +20,7 @@ export default async function Home() {
             <DarkModeButton />
           </div>
         </div>
-        <Talks talks={talks} />
+        <TalksPageContent talks={talks} />
       </div>
     </main>
   );

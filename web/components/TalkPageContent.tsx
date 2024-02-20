@@ -1,29 +1,17 @@
 // Copyright 2024 Pejman Ghorbanzade
 
-import { Talk } from '@/components/types';
-import { format } from 'date-fns';
-import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
+import Markdown from 'markdown-to-jsx';
+import { ListEntry } from '@/components/ListEntry';
+import { Talk } from '@/components/types';
 
-export default function TalkEntry({ talk }: { talk: Talk }) {
+export default function TalkPageContent({ talk }: { talk: Talk }) {
   return (
-    <div className="min-h-24 prose prose-base prose-slate min-w-full dark:prose-invert py-6 space-y-4">
-      <div className="flex justify-between rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border">
-        <div>
-          <div>
-            <span className="font-semibold">{talk.conference}</span>
-            {talk.location && (
-              <span className="font-light">, {talk.location}</span>
-            )}
-          </div>
-          <div className="text-xl">{talk.title}</div>
-        </div>
-        <div className="flex items-center">
-          <time dateTime={talk.date}>
-            {format(new Date(talk.date!), 'LLL yyyy')}
-          </time>
-        </div>
-      </div>
+    <div className="space-y-4">
+      <ListEntry
+        talk={talk}
+        className="rounded-lg border-slate-300 bg-white dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border"
+      />
       <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border">
         <Links talk={talk} />
       </div>
@@ -39,7 +27,9 @@ export default function TalkEntry({ talk }: { talk: Talk }) {
       )}
       {talk.abstract && !talk.tags.includes('hide-abstract') && (
         <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border">
-          <div className="text-xl">Abstract</div>
+          <div className="text-xl text-slate-700 dark:text-slate-300">
+            Abstract
+          </div>
           <Markdown className="wsl-mark prose prose-base prose-slate min-w-full dark:prose-invert">
             {talk.abstract}
           </Markdown>
@@ -69,7 +59,7 @@ function YouTube({ link }: { link: string }) {
 
 function Links({ talk }: { talk: Talk }) {
   return (
-    <div className="flex space-x-6">
+    <div className="flex space-x-6 prose prose-base prose-slate dark:prose-invert">
       {/* {talk.abstract && !talk.tags.includes('hide-abstract') && <a>Abstract</a>}
       {talk.links.youtube && (
         <a href={talk.links.youtube} target="_blank">

@@ -3,11 +3,11 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { format } from 'date-fns';
+import { ListEntry } from '@/components/ListEntry';
 import ViewToggleButton from '@/components/ViewToggleButton';
 import type { Talk, View } from '@/components/types';
 
-export default function Talks({ talks }: { talks: Talk[] }) {
+export default function TalksPageContent({ talks }: { talks: Talk[] }) {
   const [view, setView] = useState<View>('list');
   const ViewComponent = view === 'list' ? ListView : GridView;
   return (
@@ -35,28 +35,12 @@ function ListView({ talks }: { talks: Talk[] }) {
           className="flex decoration-transparent cursor-pointer"
           href={`/${talk.slug}`}
         >
-          <ListEntry talk={talk} />
+          <ListEntry
+            talk={talk}
+            className="hover:dark:bg-gradient-to-br hover:dark:from-black hover:dark:to-slate-900 hover:bg-slate-100"
+          />
         </Link>
       ))}
-    </div>
-  );
-}
-
-function ListEntry({ talk }: { talk: Talk }) {
-  return (
-    <div className="flex justify-between min-w-full p-6 text-slate-700 dark:text-slate-300 hover:dark:bg-gradient-to-br hover:dark:from-black hover:dark:to-slate-900 hover:bg-slate-100">
-      <div className="flex-grow">
-        <div>
-          <span>{talk.conference}</span>
-          {talk.location && <span>, {talk.location}</span>}
-        </div>
-        <div className="text-xl">{talk.title}</div>
-      </div>
-      <div className="flex items-center">
-        <time dateTime={talk.date}>
-          {format(new Date(talk.date!), 'LLL yyyy')}
-        </time>
-      </div>
     </div>
   );
 }
