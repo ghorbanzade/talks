@@ -14,6 +14,7 @@ type Links = Partial<
 >;
 
 export type Talk = {
+  slug: string;
   date: string;
   location?: string;
   conference: string;
