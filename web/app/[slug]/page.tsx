@@ -2,11 +2,15 @@
 
 import DarkModeButton from '@/components/DarkModeButton';
 import NavBar from '@/components/NavBar';
-import Talks from '@/components/Talks';
+import TalkEntry from '@/components/TalkEntry';
 import { getTalks } from '@/components/utils';
 
-export default async function Home() {
-  const talks = await getTalks();
+export async function generateStaticParams() {
+  return (await getTalks()).map((talk) => ({ slug: talk.slug }));
+}
+
+export default async function Home({ params }: { params: { slug: string } }) {
+  const talk = (await getTalks()).filter((v) => v.slug === params.slug)[0];
   return (
     <main>
       <div className="mx-auto max-w-screen-lg space-y-4 py-4">
@@ -20,7 +24,7 @@ export default async function Home() {
             <DarkModeButton />
           </div>
         </div>
-        <Talks talks={talks} />
+        <TalkEntry talk={talk} />
       </div>
     </main>
   );

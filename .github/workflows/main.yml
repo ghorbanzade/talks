@@ -60,10 +60,10 @@ jobs:
         if: steps.changes.outputs.cppcon23 == 'true'
       - name: Prepare final artifact
         run: |
-          mkdir -p ./dist
-          mv ./slides/cppcon23/dist ./dist/cppcon23
-          mkdir -p ./dist/cppcon23/images
-          mv ./slides/cppcon23/images/cppcon-title-page.png ./dist/cppcon23/images
+          mkdir -p ./dist/slides
+          mv ./slides/cppcon23/dist ./dist/slides/cppcon23
+          mkdir -p ./dist/slides/cppcon23/images
+          mv ./slides/cppcon23/images/cppcon-title-page.png ./dist/slides/cppcon23/images
           tar -zcf cppcon23.tar.gz ./dist
         if: steps.changes.outputs.cppcon23 == 'true'
       - name: push api to aws
@@ -116,10 +116,10 @@ jobs:
         if: steps.changes.outputs.cppcon21 == 'true'
       - name: Prepare final artifact
         run: |
-          mkdir -p ./dist
-          mv ./slides/cppcon21/dist ./dist/cppcon21
-          mkdir -p ./dist/cppcon21/images
-          mv ./slides/cppcon21/images/cppcon-title-page.png ./dist/cppcon21/images
+          mkdir -p ./dist/slides
+          mv ./slides/cppcon21/dist ./dist/slides/cppcon21
+          mkdir -p ./dist/slides/cppcon21/images
+          mv ./slides/cppcon21/images/cppcon-title-page.png ./dist/slides/cppcon21/images
           tar -zcf cppcon21.tar.gz ./dist
         if: steps.changes.outputs.cppcon21 == 'true'
       - name: push api to aws
@@ -153,10 +153,10 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE }}
       - name: Prepare final artifact
         run: |
-          mkdir -p ./dist/bazelcon23/images
-          mv ./slides/bazelcon23/redirect.html ./dist/bazelcon23/index.html
-          mv ./slides/bazelcon23/slides-bazelcon23-pejman.pdf ./dist/bazelcon23/
-          mv ./slides/bazelcon23/images/bazelcon-cover.png ./dist/bazelcon23/images/
+          mkdir -p ./dist/slides/bazelcon23/images
+          mv ./slides/bazelcon23/redirect.html ./dist/slides/bazelcon23/index.html
+          mv ./slides/bazelcon23/slides-bazelcon23-pejman.pdf ./dist/slides/bazelcon23/
+          mv ./slides/bazelcon23/images/bazelcon-cover.png ./dist/slides/bazelcon23/images/
           tar -zcf bazelcon23.tar.gz ./dist
         if: steps.changes.outputs.bazelcon23 == 'true'
       - name: push api to aws

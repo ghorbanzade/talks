@@ -1,11 +1,12 @@
 // Copyright 2024 Pejman Ghorbanzade
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import Markdown from 'markdown-to-jsx';
-import type { Talk, View } from '@/components/types';
 import ViewToggleButton from '@/components/ViewToggleButton';
+import type { Talk, View } from '@/components/types';
 
 export default function Talks({ talks }: { talks: Talk[] }) {
   const [view, setView] = useState<View>('list');
@@ -42,14 +43,12 @@ function ListEntry({ talk }: { talk: Talk }) {
     <div className="min-h-24 prose prose-base prose-slate min-w-full dark:prose-invert py-6">
       <div className="flex justify-between">
         <div>
-          <div className="flex items-center space-x-2">
-            <div>
-              <span className="font-semibold">{talk.conference}</span>
-              {talk.location && (
-                <span className="font-light">, {talk.location}</span>
-              )}
-            </div>
-          </div>
+          <Link className="cursor-pointer" href={`/${talk.slug}`}>
+            <span className="font-semibold">{talk.conference}</span>
+            {talk.location && (
+              <span className="font-light">, {talk.location}</span>
+            )}
+          </Link>
           <div className="text-xl">{talk.title}</div>
           <div className="flex space-x-6">
             {talk.abstract && !talk.tags.includes('hide-abstract') && (
