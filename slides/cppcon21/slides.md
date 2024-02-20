@@ -5,7 +5,7 @@ info: Building an Extensible Type Serialization System using Partial Template Sp
 author: Pejman Ghorbanzade
 keywords: cppcon
 presenter: true
-download: https://pejman.dev/talks/cppcon21/slides-cppcon21-pejman.pdf
+download: https://pejman.dev/talks/slides/cppcon21/slides-cppcon21-pejman.pdf
 exportFilename: dist/slides-cppcon21-pejman.pdf
 export:
   format: pdf

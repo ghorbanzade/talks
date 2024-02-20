@@ -5,7 +5,7 @@ info: Continuous Regression Testing for Faster and Safer Refactoring
 author: Pejman Ghorbanzade
 keywords: cppcon
 presenter: true
-download: https://pejman.dev/talks/cppcon23/slides-cppcon23-pejman.pdf
+download: https://pejman.dev/talks/slides/cppcon23/slides-cppcon23-pejman.pdf
 exportFilename: dist/slides-cppcon23-pejman.pdf
 export:
   format: pdf
