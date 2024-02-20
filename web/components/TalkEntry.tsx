@@ -3,6 +3,7 @@
 import { Talk } from '@/components/types';
 import { format } from 'date-fns';
 import Markdown from 'markdown-to-jsx';
+import Image from 'next/image';
 
 export default function TalkEntry({ talk }: { talk: Talk }) {
   return (
@@ -24,8 +25,13 @@ export default function TalkEntry({ talk }: { talk: Talk }) {
         </div>
       </div>
       <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border">
-        <Links links={talk.links} />
+        <Links talk={talk} />
       </div>
+      {!talk.links.youtube && talk.links.cover && (
+        <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border">
+          <Cover link={talk.links.cover} />
+        </div>
+      )}
       {talk.links.youtube && (
         <div className="rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border">
           <YouTube link={talk.links.youtube} />
@@ -43,6 +49,10 @@ export default function TalkEntry({ talk }: { talk: Talk }) {
   );
 }
 
+function Cover({ link }: { link: string }) {
+  return <Image src={link} width="1200" height="675" alt="Image" />;
+}
+
 function YouTube({ link }: { link: string }) {
   return (
     <iframe
@@ -57,33 +67,39 @@ function YouTube({ link }: { link: string }) {
   );
 }
 
-function Links({ links }: { links: Talk['links'] }) {
+function Links({ talk }: { talk: Talk }) {
   return (
     <div className="flex space-x-6">
-      {links.registration && (
-        <a href={links.registration} target="_blank">
+      {/* {talk.abstract && !talk.tags.includes('hide-abstract') && <a>Abstract</a>}
+      {talk.links.youtube && (
+        <a href={talk.links.youtube} target="_blank">
+          Recording
+        </a>
+      )} */}
+      {talk.links.registration && (
+        <a href={talk.links.registration} target="_blank">
           Registration
         </a>
       )}
-      {(links.pdf || links.html) && (
+      {(talk.links.pdf || talk.links.html) && (
         <div>
           <span>Slides (</span>
-          {links.html && (
-            <a href={links.html} target="_blank">
+          {talk.links.html && (
+            <a href={talk.links.html} target="_blank">
               HTML
             </a>
           )}
-          {links.html && links.pdf && <span>, </span>}
-          {links.pdf && (
-            <a href={links.pdf} target="_blank">
+          {talk.links.html && talk.links.pdf && <span>, </span>}
+          {talk.links.pdf && (
+            <a href={talk.links.pdf} target="_blank">
               PDF
             </a>
           )}
           <span>)</span>
         </div>
       )}
-      {links.repository && (
-        <a href={links.repository} target="_blank">
+      {talk.links.repository && (
+        <a href={talk.links.repository} target="_blank">
           Repository
         </a>
       )}
