@@ -9,11 +9,11 @@ export default async function Home() {
   const talks = await getTalks();
   return (
     <main>
-      <div className="mx-auto max-w-screen-lg space-y-4 py-4">
+      <div className="mx-auto max-w-screen-lg space-y-4">
         <NavBar />
         <div className="relative min-h-24 rounded-lg border-slate-300 bg-white p-6 dark:border-slate-700 dark:bg-gradient-to-br dark:from-black dark:to-slate-900 border">
           <div className="prose dark:prose-invert">
-            <div className="text-2xl">Public Talks</div>
+            <div className="text-xl">Talks</div>
             <div>Pejman Ghorbanzade</div>
           </div>
           <div className="absolute right-6 top-10">

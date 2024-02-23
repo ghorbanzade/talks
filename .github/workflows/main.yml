@@ -52,7 +52,7 @@ jobs:
         if: steps.changes.outputs.cppcon23 == 'true'
       - name: Build slides
         working-directory: ./slides/cppcon23
-        run: npm run build -- --base /talks/cppcon23
+        run: npm run build -- --base /talks/slides/cppcon23
         if: steps.changes.outputs.cppcon23 == 'true'
       - name: Export slides
         working-directory: ./slides/cppcon23
@@ -108,7 +108,7 @@ jobs:
         if: steps.changes.outputs.cppcon21 == 'true'
       - name: Build slides
         working-directory: ./slides/cppcon21
-        run: npm run build -- --base /talks/cppcon21
+        run: npm run build -- --base /talks/slides/cppcon21
         if: steps.changes.outputs.cppcon21 == 'true'
       - name: Export slides
         working-directory: ./slides/cppcon21

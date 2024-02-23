@@ -1,5 +1,5 @@
 // Copyright 2023 Pejman Ghorbanzade
-'use client'
+'use client';
 
 import { useEffect, useState } from 'react';
 import { FiMoon, FiSun } from 'react-icons/fi';
@@ -43,7 +43,7 @@ export default function DarkModeButton() {
   return (
     <Icon
       size="1.5em"
-      className="cursor-pointer text-slate-200 transition ease-in-out hover:text-slate-300 dark:text-slate-700 dark:hover:text-slate-500"
+      className="cursor-pointer text-slate-400 transition ease-in-out hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-200"
       title={`Switch to ${darkMode ? 'light mode' : 'dark mode'}`}
       onClick={toggleDarkMode}
     />
